@@ -71,6 +71,11 @@ export default {
 				'brand-dark-blue': 'hsl(var(--brand-dark-blue))',
 				'navbar-bg': 'var(--navbar-bg)'
 			},
+			fontFamily: {
+				'title': ['IBM Plex Sans', 'sans-serif'],
+				'body': ['Noto Sans', 'sans-serif'],
+				'sans': ['Noto Sans', 'sans-serif']
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
