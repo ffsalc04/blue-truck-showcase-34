@@ -22,10 +22,10 @@ const ServiceModal = ({ isOpen, onClose, title, description, backgroundImage }: 
       ></div>
       
       {/* Modal Content */}
-      <div className="relative w-full h-full animate-fade-in">
+      <div className="relative w-[95%] h-[90%] max-w-7xl animate-fade-in">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-lg overflow-hidden"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         >
           <div className="absolute inset-0 bg-black/30"></div>
