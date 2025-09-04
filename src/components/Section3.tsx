@@ -8,43 +8,34 @@ const Section3 = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Half - Text Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-brand-brown">
-              Certificaciones y Avales
+            <h2 className="text-4xl font-semibold text-brand-brown">
+              Calidad
             </h2>
             
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-brand-blue">
-                  Autoridades de Transporte
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Contamos con todas las certificaciones requeridas por las autoridades 
-                  nacionales de transporte. Nuestros permisos están vigentes y cumplimos 
-                  con todos los requisitos legales para operar en el territorio nacional.
-                </p>
-              </div>
+            <h3 className="text-2xl font-medium text-brand-blue">
+              Certificaciones Internacionales en Seguridad Logística
+            </h3>
+            
+            <div className="space-y-6 text-gray-700 leading-relaxed">
+              <p>
+                En Torego, la seguridad no es opcional, es un estándar. Colaboramos con socios comerciales que operan bajo las certificaciones más estrictas y reconocidas a nivel global, como CTPAT (Customs Trade Partnership Against Terrorism) y OEA (Operador Económico Autorizado). Gracias a esta alianza, garantizamos un entorno seguro y conforme para el movimiento de mercancías en México, Estados Unidos y Canadá.
+              </p>
               
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-brand-blue">
-                  Estándares de Calidad
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Certificados bajo normas ISO 9001 para gestión de calidad y ISO 14001 
-                  para gestión ambiental. Estos estándares nos permiten garantizar 
-                  servicios de la más alta calidad mientras cuidamos el medio ambiente.
-                </p>
-              </div>
+              <p>
+                Estas certificaciones respaldan nuestro compromiso con:
+              </p>
               
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-brand-blue">
-                  Seguridad y Protección
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Avalados por organismos de seguridad especializados en transporte de 
-                  carga. Nuestros protocolos de seguridad son auditados regularmente 
-                  para mantener los más altos estándares de protección.
-                </p>
-              </div>
+              <ul className="space-y-2 ml-4">
+                <li>• Protocolos de seguridad robustos en cada eslabón de la cadena logística</li>
+                <li>• Cumplimiento integral de normativas aduaneras internacionales</li>
+                <li>• Gestión trazable y documentada de mercancías</li>
+                <li>• Procesos aduanales más ágiles y controlados en cruces fronterizos</li>
+                <li>• Reducción de riesgos operativos mediante controles preventivos</li>
+              </ul>
+              
+              <p>
+                Al elegir nuestros servicios, su empresa se integra a una red logística alineada con las mejores prácticas internacionales, fortaleciendo la seguridad, eficiencia y confiabilidad de sus operaciones en el corredor comercial de América del Norte.
+              </p>
             </div>
           </div>
           
