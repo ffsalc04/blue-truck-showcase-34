@@ -3,9 +3,9 @@ import truckDriverBg from '@/assets/truck-driver.jpg';
 
 const ServiciosSection2 = () => {
   const teamHighlights = [
-    "15+ años de experiencia en logística",
-    "Equipo certificado y especializado",
-    "Disponibilidad 24/7 para emergencias"
+    "Nos dedicamos a construir relaciones sólidas y duraderas.",
+    "Buscamos la excelencia, enfrentando retos difíciles con determinación.",
+    "Llevamos cada proyecto con cuidado y atención hasta el final."
   ];
 
   return (
@@ -36,10 +36,6 @@ const ServiciosSection2 = () => {
             
             {/* Content over the brown background */}
             <div className="relative z-10 h-full flex flex-col justify-center px-12 py-16">
-              <h2 className="text-4xl font-bold text-white mb-8">
-                Nuestro Equipo
-              </h2>
-              
               <div className="space-y-6">
                 {teamHighlights.map((highlight, index) => (
                   <div key={index} className="bg-brand-blue p-6 rounded-lg shadow-lg">
