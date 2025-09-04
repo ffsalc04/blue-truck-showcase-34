@@ -17,17 +17,11 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Soluciones de
-              <span className="block text-brand-light-blue">Transporte</span>
-              Confiables
+            <h1 className="text-5xl lg:text-6xl font-semibold leading-tight">
+              Aliados en logística portuaria, nacional y fronteriza: conectamos México con EE.UU. y Canadá
             </h1>
-            <p className="text-xl text-gray-200 max-w-lg">
-              Conectamos tu negocio con el mundo a través de servicios de transporte 
-              eficientes y seguros que garantizan la entrega puntual de tus mercancías.
-            </p>
-            <Button variant="pill" size="lg" className="mt-8">
-              Contáctanos
+            <Button variant="pill" size="lg" className="mt-8 rounded-full px-8">
+              Contáctanos →
             </Button>
           </div>
         </div>
