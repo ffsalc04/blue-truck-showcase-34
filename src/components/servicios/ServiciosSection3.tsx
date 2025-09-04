@@ -32,13 +32,13 @@ const ServiciosSection3 = () => {
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Cobertura inteligente para llegar a donde lo necesite
               </h2>
-              <p className="text-brand-cream text-lg leading-relaxed mb-6">
+              <p className="text-brand-cream text-base leading-relaxed mb-6">
                 En Torego global, entendemos que la ubicación lo es todo en logística. Por eso, hemos construido una red de operación sólida y bien distribuida a lo largo del país, que nos permite estar siempre cerca de ti y de tus clientes.
               </p>
-              <p className="text-brand-cream text-lg leading-relaxed mb-6">
+              <p className="text-brand-cream text-base leading-relaxed mb-6">
                 Gracias a nuestra presencia estratégica en zonas clave y a una infraestructura logística robusta, podemos planear rutas más eficientes, reducir los tiempos de entrega y adaptarnos con agilidad a cualquier cambio o desafío del mercado. Ya sea en grandes ciudades o destinos menos accesibles, conectamos cada tramo del recorrido con precisión, cuidando que tu mercancía llegue siempre a tiempo y en las mejores condiciones.
               </p>
-              <p className="text-brand-cream text-lg leading-relaxed">
+              <p className="text-brand-cream text-base leading-relaxed">
                 Tu operación tiene el respaldo de una conectividad logística diseñada para crecer contigo.
               </p>
             </div>
