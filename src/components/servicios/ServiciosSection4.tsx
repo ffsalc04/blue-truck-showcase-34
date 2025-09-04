@@ -1,7 +1,14 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const ServiciosSection4 = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contactanos');
+  };
+
   return (
     <section className="relative min-h-96 flex items-center">
       {/* Diagonal background */}
@@ -24,17 +31,25 @@ const ServiciosSection4 = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-16">
-        <div className="max-w-2xl">
-          <h2 className="text-5xl font-bold text-white mb-6">
+        <div className="max-w-3xl">
+          <h2 className="text-5xl font-semibold text-white mb-6">
             Hablemos
           </h2>
-          <p className="text-xl text-white mb-8 max-w-lg">
-            ¿Listo para optimizar tu cadena de suministro? 
-            Contacta con nuestros especialistas y descubre cómo podemos 
-            ayudarte a llevar tu negocio al siguiente nivel.
+          <h3 className="text-2xl text-white mb-6">
+            ¿Tienes dudas sobre la mejor opción para tu negocio?
+          </h3>
+          <p className="text-lg text-white mb-6 leading-relaxed">
+            Estamos listos para orientarte. Cuéntanos tus objetivos logísticos y te guiaremos paso a paso para encontrar la mejor solución.
           </p>
-          <Button variant="pill" size="lg">
-            Solicitar Cotización
+          <p className="text-lg text-white mb-8 leading-relaxed">
+            Tu operación es única, y por eso queremos conocerte. Escríbenos y descubramos juntos cómo mover tu mundo con eficiencia.
+          </p>
+          <Button 
+            variant="pill" 
+            size="lg"
+            onClick={handleContactClick}
+          >
+            Contáctanos
           </Button>
         </div>
       </div>
