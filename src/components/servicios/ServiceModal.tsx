@@ -22,7 +22,10 @@ const ServiceModal = ({ isOpen, onClose, title, description, backgroundImage }: 
       ></div>
       
       {/* Modal Content */}
-      <div className="relative w-[95%] h-[90%] max-w-7xl animate-fade-in">
+      <div 
+        className="relative w-[95%] h-[90%] max-w-7xl animate-fade-in cursor-pointer"
+        onClick={onClose}
+      >
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-lg overflow-hidden"
