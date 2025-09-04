@@ -29,18 +29,17 @@ const ServiciosSection3 = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Dark brown box with text */}
             <div className="bg-brand-dark-brown p-8 rounded-lg">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Experiencia Internacional
+              <h2 className="text-3xl font-semibold text-white mb-6">
+                Cobertura inteligente para llegar a donde lo necesite
               </h2>
               <p className="text-brand-cream text-lg leading-relaxed mb-6">
-                Con más de una década en el mercado, hemos consolidado una red logística 
-                que abarca múltiples continentes. Nuestros servicios de transporte aéreo 
-                conectan los principales centros comerciales del mundo.
+                En Torego global, entendemos que la ubicación lo es todo en logística. Por eso, hemos construido una red de operación sólida y bien distribuida a lo largo del país, que nos permite estar siempre cerca de ti y de tus clientes.
+              </p>
+              <p className="text-brand-cream text-lg leading-relaxed mb-6">
+                Gracias a nuestra presencia estratégica en zonas clave y a una infraestructura logística robusta, podemos planear rutas más eficientes, reducir los tiempos de entrega y adaptarnos con agilidad a cualquier cambio o desafío del mercado. Ya sea en grandes ciudades o destinos menos accesibles, conectamos cada tramo del recorrido con precisión, cuidando que tu mercancía llegue siempre a tiempo y en las mejores condiciones.
               </p>
               <p className="text-brand-cream text-lg leading-relaxed">
-                Trabajamos con las aerolíneas de carga más confiables y mantenemos 
-                alianzas estratégicas que nos permiten ofrecer tarifas competitivas 
-                y tiempos de tránsito optimizados para tu mercancía.
+                Tu operación tiene el respaldo de una conectividad logística diseñada para crecer contigo.
               </p>
             </div>
             
