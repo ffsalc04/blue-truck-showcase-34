@@ -86,7 +86,7 @@ const Section4 = () => {
                     onClick={() => setShowForm(true)}
                     variant="outline" 
                     size="lg" 
-                    className="w-full border-white text-white hover:bg-white hover:text-brand-blue hover-scale"
+                    className="w-full border-white text-white hover:bg-white hover:text-brand-blue hover-scale bg-transparent"
                   >
                     Formulario de Contacto
                   </Button>
