@@ -23,10 +23,10 @@ const ServiciosHero = () => {
                 <h1 className="text-5xl lg:text-6xl font-semibold leading-tight">
                   NUESTROS SERVICIOS
                 </h1>
-                <p className="text-xl text-gray-100 max-w-lg">
+                <p className="text-lg text-gray-100 max-w-lg">
                   Movemos tu negocio con estrategia y precisión entendemos que no existen soluciones únicas. Cada empresa enfrenta desafíos logísticos distintos, y por eso creamos estrategias alineadas con tus objetivos. Nos encargamos de que tu mercancía llegue a tiempo, segura y con una tarifa competitiva y transparente sin importar si es un envío nacional o cruza fronteras.
                 </p>
-                <p className="text-xl text-gray-100 max-w-lg">
+                <p className="text-lg text-gray-100 max-w-lg">
                   Combinamos experiencia, tecnología y una red sólida para darte visibilidad total, respuesta inmediata y resultados que impulsan tu operación.
                 </p>
               </div>
