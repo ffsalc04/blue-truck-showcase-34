@@ -26,9 +26,9 @@ const Section2 = () => {
         </div>
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white space-y-4">
-          <h2 className="text-4xl lg:text-5xl font-bold">Experiencia Comprobada</h2>
+          <h2 className="text-4xl lg:text-5xl font-semibold">Adaptamos la logística a tu operación</h2>
           <p className="text-xl text-gray-200 max-w-2xl">
-            Más de 10 años conectando empresas con soluciones de transporte confiables
+            Con nuestros servicios multimodales, elegimos el camino más inteligente para tu negocio.
           </p>
         </div>
       </div>
