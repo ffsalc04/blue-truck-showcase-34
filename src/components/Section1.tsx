@@ -31,7 +31,7 @@ const Section1 = () => {
         {/* Middle Section */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div className="text-white space-y-6">
-            <h3 className="text-3xl font-body text-white leading-relaxed">
+            <h3 className="text-xl font-body text-white leading-relaxed">
               Impulsamos el éxito de nuestros clientes con{' '}
               <span className="text-brand-light-blue">
                 soluciones logísticas de alto valor, brindando un servicio claro, eficiente
