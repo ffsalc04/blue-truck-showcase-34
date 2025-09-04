@@ -31,18 +31,13 @@ const Section1 = () => {
         {/* Middle Section */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div className="text-white space-y-6">
-            <h3 className="text-3xl font-bold">Transporte Especializado</h3>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Ofrecemos servicios de transporte terrestre con una flota moderna y equipada 
-              con la última tecnología. Nuestro compromiso es brindar soluciones logísticas 
-              integrales que se adapten a las necesidades específicas de cada cliente, 
-              garantizando la seguridad y puntualidad en cada entrega.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Con más de una década de experiencia en el sector, hemos desarrollado 
-              protocolos estrictos de calidad y seguridad que nos permiten mantener 
-              los más altos estándares en el transporte de mercancías.
-            </p>
+            <h3 className="text-3xl font-body text-white leading-relaxed">
+              Impulsamos el éxito de nuestros clientes con{' '}
+              <span className="text-brand-light-blue">
+                soluciones logísticas de alto valor, brindando un servicio claro, eficiente
+              </span>
+              {' '}y con verdadero compromiso.
+            </h3>
           </div>
           
           <div className="flex justify-center">
