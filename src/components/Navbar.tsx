@@ -10,14 +10,14 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#servicios" className="text-white hover:text-brand-light-blue transition-colors">
-            Servicios
-          </a>
           <a href="#nosotros" className="text-white hover:text-brand-light-blue transition-colors">
-            Nosotros
+            Quienes Somos
           </a>
-          <a href="#certificaciones" className="text-white hover:text-brand-light-blue transition-colors">
-            Certificaciones
+          <a href="#servicios" className="text-white hover:text-brand-light-blue transition-colors">
+            Nuestros Servicios
+          </a>
+          <a href="#transportes" className="text-white hover:text-brand-light-blue transition-colors">
+            Transportes
           </a>
           <a href="#contacto" className="text-white hover:text-brand-light-blue transition-colors">
             Contacto
