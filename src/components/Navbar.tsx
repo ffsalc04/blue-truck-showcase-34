@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navItems = [
     { href: '/', label: 'Inicio', key: 'inicio' },
-    { href: '#nosotros', label: 'Quienes Somos', key: 'nosotros' },
+    { href: '/quienes-somos', label: 'Quienes Somos', key: 'nosotros' },
     { href: '/servicios', label: 'Nuestros Servicios', key: 'servicios' },
     { href: '/transportes', label: 'Transportes', key: 'transportes' },
     { href: '/contactanos', label: 'Contacto', key: 'contactanos' }
@@ -22,6 +22,7 @@ const Navbar = () => {
       // Hide current page's button
       if (currentPath === '/servicios' && item.key === 'servicios') return false;
       if (currentPath === '/transportes' && item.key === 'transportes') return false;
+      if (currentPath === '/quienes-somos' && item.key === 'nosotros') return false;
       if (currentPath === '/contactanos' && item.key === 'contactanos') return false;
       if (currentPath === '/' && item.key === 'inicio') return true; // Still show on homepage
       
@@ -30,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50" style={{ backgroundColor: 'rgba(69, 93, 123, 0.45)' }}>
+    <nav className="fixed top-0 w-full z-50" style={{ backgroundColor: 'var(--navbar-bg)' }}>
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center">
           <img src={logo} alt="Company Logo" className="h-8 w-auto" />
@@ -38,13 +39,13 @@ const Navbar = () => {
         
         <div className="hidden md:flex items-center space-x-8">
           {getVisibleNavItems().map((item) => (
-            <a 
+            <Link 
               key={item.key}
-              href={item.href} 
+              to={item.href} 
               className="text-white hover:text-brand-light-blue transition-colors"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
