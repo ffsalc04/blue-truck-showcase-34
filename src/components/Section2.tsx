@@ -17,7 +17,7 @@ const Section2 = () => {
   return (
     <section id="nosotros" className="py-0">
       {/* Upper Half - Image with Text Overlay */}
-      <div className="relative h-96">
+      <div className="relative h-96 bg-brand-blue">
         <div 
           className="absolute inset-0 bg-cover bg-center rounded-b-[3rem]"
           style={{ backgroundImage: `url(${seaport})` }}
