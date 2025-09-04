@@ -66,6 +66,8 @@ export default {
 				'brand-blue': 'hsl(var(--brand-blue))',
 				'brand-light-blue': 'hsl(var(--brand-light-blue))',
 				'brand-brown': 'hsl(var(--brand-brown))',
+				'brand-dark-brown': 'hsl(var(--brand-dark-brown))',
+				'brand-cream': 'hsl(var(--brand-cream))',
 				'brand-dark-blue': 'hsl(var(--brand-dark-blue))',
 				'navbar-bg': 'var(--navbar-bg)'
 			},

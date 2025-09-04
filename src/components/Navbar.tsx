@@ -13,7 +13,7 @@ const Navbar = () => {
           <a href="#nosotros" className="text-white hover:text-brand-light-blue transition-colors">
             Quienes Somos
           </a>
-          <a href="#servicios" className="text-white hover:text-brand-light-blue transition-colors">
+          <a href="/servicios" className="text-white hover:text-brand-light-blue transition-colors">
             Nuestros Servicios
           </a>
           <a href="#transportes" className="text-white hover:text-brand-light-blue transition-colors">
