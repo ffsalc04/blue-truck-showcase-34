@@ -24,7 +24,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-[120vh] flex items-center py-20">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -57,7 +57,7 @@ const ContactSection = () => {
             <div 
               className={`bg-brand-blue rounded-lg shadow-2xl transition-all duration-500 ease-in-out ${
                 showForm 
-                  ? 'w-full max-w-2xl h-auto max-h-[80vh] overflow-y-auto p-8 animate-scale-in' 
+                  ? 'w-full max-w-4xl h-auto p-8 animate-scale-in' 
                   : 'w-80 h-80 p-8 flex flex-col justify-center animate-fade-in'
               }`}
             >
@@ -106,7 +106,7 @@ const ContactSection = () => {
                   
                   <form onSubmit={handleFormSubmit} className="space-y-6">
                     {/* Basic Contact Info */}
-                    <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
                       <Input
                         placeholder="Nombre completo"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
@@ -135,29 +135,29 @@ const ContactSection = () => {
                     <div className="space-y-4 pt-4 border-t border-white/20">
                       <h4 className="text-lg font-semibold text-white mb-3">Información del Servicio</h4>
                       
-                      <div className="space-y-4">
-                        <Select>
-                          <SelectTrigger className="bg-white/10 border-white/30 text-white">
-                            <SelectValue placeholder="Tipo de Servicio Requerido" />
-                          </SelectTrigger>
-                          <SelectContent className="bg-white border-gray-200 z-50">
-                            <SelectItem value="flete-nacional">Flete Nacional</SelectItem>
-                            <SelectItem value="contenedor-puerto">Contenedor por Puerto</SelectItem>
-                            <SelectItem value="cruce-fronterizo">Cruce Fronterizo EEUU/CAN</SelectItem>
-                            <SelectItem value="otro">Otro</SelectItem>
-                          </SelectContent>
-                        </Select>
-
-                        <div className="grid grid-cols-2 gap-4">
-                          <Input
-                            placeholder="Origen"
-                            className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
-                          />
-                          <Input
-                            placeholder="Destino"
-                            className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
-                          />
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="col-span-2">
+                          <Select>
+                            <SelectTrigger className="bg-white/10 border-white/30 text-white">
+                              <SelectValue placeholder="Tipo de Servicio Requerido" />
+                            </SelectTrigger>
+                            <SelectContent className="bg-white border-gray-200 z-50">
+                              <SelectItem value="flete-nacional">Flete Nacional</SelectItem>
+                              <SelectItem value="contenedor-puerto">Contenedor por Puerto</SelectItem>
+                              <SelectItem value="cruce-fronterizo">Cruce Fronterizo EEUU/CAN</SelectItem>
+                              <SelectItem value="otro">Otro</SelectItem>
+                            </SelectContent>
+                          </Select>
                         </div>
+
+                        <Input
+                          placeholder="Origen"
+                          className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
+                        />
+                        <Input
+                          placeholder="Destino"
+                          className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
+                        />
 
                         <Input
                           placeholder="Tipo de Unidad Requerido (si aplica)"
@@ -179,15 +179,15 @@ const ContactSection = () => {
                     <div className="space-y-4 pt-4 border-t border-white/20">
                       <h4 className="text-lg font-semibold text-white mb-3">Tipo de Carga</h4>
                       
-                      <div className="space-y-4">
+                      <div className="grid grid-cols-2 gap-6">
                         {/* Volume/Weight Toggle */}
-                        <div className="space-y-2">
+                        <div className="space-y-3">
                           <Label className="text-white text-sm">Estimación de carga:</Label>
-                          <div className="flex items-center space-x-4">
+                          <div className="flex items-center space-x-2">
                             <button
                               type="button"
                               onClick={() => setVolumeWeight('volume')}
-                              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                                 volumeWeight === 'volume' 
                                   ? 'bg-white text-brand-blue' 
                                   : 'bg-white/20 text-white hover:bg-white/30'
@@ -198,7 +198,7 @@ const ContactSection = () => {
                             <button
                               type="button"
                               onClick={() => setVolumeWeight('weight')}
-                              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                                 volumeWeight === 'weight' 
                                   ? 'bg-white text-brand-blue' 
                                   : 'bg-white/20 text-white hover:bg-white/30'
@@ -213,16 +213,18 @@ const ContactSection = () => {
                           />
                         </div>
 
-                        {/* Temperature Control */}
-                        <div className="flex items-center justify-between">
-                          <Label className="text-white text-sm">¿Requiere temperatura controlada?</Label>
-                          <Switch className="data-[state=checked]:bg-white" />
-                        </div>
+                        <div className="space-y-4">
+                          {/* Temperature Control */}
+                          <div className="flex items-center justify-between">
+                            <Label className="text-white text-sm">¿Requiere temperatura controlada?</Label>
+                            <Switch className="data-[state=checked]:bg-white" />
+                          </div>
 
-                        {/* Dangerous Cargo */}
-                        <div className="flex items-center justify-between">
-                          <Label className="text-white text-sm">¿Es carga peligrosa?</Label>
-                          <Switch className="data-[state=checked]:bg-white" />
+                          {/* Dangerous Cargo */}
+                          <div className="flex items-center justify-between">
+                            <Label className="text-white text-sm">¿Es carga peligrosa?</Label>
+                            <Switch className="data-[state=checked]:bg-white" />
+                          </div>
                         </div>
                       </div>
                     </div>
