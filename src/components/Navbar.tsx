@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50" style={{ backgroundColor: 'var(--navbar-bg)' }}>
+    <nav className="fixed top-0 w-full z-50 bg-brand-blue/45">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center">
           <img src={logo} alt="Company Logo" className="h-8 w-auto" />
