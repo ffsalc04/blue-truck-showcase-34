@@ -9,36 +9,29 @@ const Section4 = () => {
           {/* Left Half - Contact Information */}
           <div className="text-white space-y-8">
             <div>
-              <h2 className="text-4xl font-bold mb-4">Contáctanos</h2>
+              <h2 className="text-4xl font-semibold mb-6">Contáctanos</h2>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Estamos listos para atender tus necesidades de transporte. 
-                Nuestro equipo de especialistas te brindará la mejor solución 
-                logística para tu empresa.
+                Valoramos cada una de tus dudas y estamos comprometidos a brindarte una atención ágil y hecha a tu medida. Siempre habrá alguien de nuestro equipo listo para orientarte y acompañarte en lo que necesites.
               </p>
             </div>
             
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <Phone className="h-6 w-6 text-brand-light-blue" />
-                <div>
-                  <p className="font-semibold">Teléfono</p>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
-                </div>
+              <div>
+                <h3 className="text-xl font-medium text-brand-light-blue mb-2">Horarios de atención</h3>
+                <p className="text-gray-300">Lunes a viernes de 08:00-17:00</p>
               </div>
               
-              <div className="flex items-center gap-4">
-                <Mail className="h-6 w-6 text-brand-light-blue" />
-                <div>
-                  <p className="font-semibold">Email</p>
-                  <p className="text-gray-300">contacto@empresa.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <MapPin className="h-6 w-6 text-brand-light-blue" />
-                <div>
-                  <p className="font-semibold">Dirección</p>
-                  <p className="text-gray-300">Av. Principal 123, Ciudad</p>
+              <div>
+                <h3 className="text-xl font-medium text-brand-light-blue mb-4">Contacto Directo</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-5 w-5 text-brand-light-blue" />
+                    <p className="text-gray-300">contact@toregoglobal.com</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 text-brand-light-blue" />
+                    <p className="text-gray-300">(+52) 33 4086 0672</p>
+                  </div>
                 </div>
               </div>
             </div>
