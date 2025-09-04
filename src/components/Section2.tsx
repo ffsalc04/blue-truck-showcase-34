@@ -102,6 +102,7 @@ const Section2 = () => {
                   <Button 
                     variant="pill-white" 
                     size="sm"
+                    className="rounded-full px-8 w-full"
                     onClick={() => handleServiceClick(index)}
                   >
                     →
