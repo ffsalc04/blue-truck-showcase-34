@@ -4,72 +4,71 @@ import TransportModal from './TransportModal';
 import cargaTerrestreImg from '@/assets/transport/carga-terrestre.jpg';
 import logisticaIntegradaImg from '@/assets/transport/logistica-integrada.jpg';
 import transporteRefrigeradoImg from '@/assets/transport/transporte-refrigerado.jpg';
-import cargaPeligrosaImg from '@/assets/transport/carga-peligrosa.jpg';
 import mudanzasCorporativasImg from '@/assets/transport/mudanzas-corporativas.jpg';
-import transporteUrgenteImg from '@/assets/transport/transporte-urgente.jpg';
 import seguimientoGpsImg from '@/assets/transport/seguimiento-gps.jpg';
 import segurosIntegralesImg from '@/assets/transport/seguros-integrales.jpg';
+import truckLoading from '@/assets/truck-loading.jpg';
 
 const TransportesSection2 = () => {
-  const [selectedFeature, setSelectedFeature] = useState<number | null>(null);
+  const [selectedService, setSelectedService] = useState<number | null>(null);
 
-  const features = [
-    {
-      title: "Carga Terrestre",
-      description: "Transporte especializado para mercancía general y carga pesada por carretera.",
-      fullDescription: "Nuestro servicio de carga terrestre ofrece soluciones completas para el transporte de mercancías por carretera. Contamos con una flota moderna de vehículos especializados para diferentes tipos de carga, desde productos generales hasta cargas pesadas que requieren equipos especiales. Nuestros conductores están certificados y capacitados para manejar todo tipo de mercancías con la máxima seguridad y eficiencia.",
+  const services = [
+    { 
+      title: "Caja refrigerada", 
+      description: "Transporte con temperatura controlada",
+      fullDescription: "Unidades de alto rendimiento con control de temperatura, diseñadas para cumplir con cada requisito: cumplen con FSMA y CARB, son rentables y reconocidas por brindar un servicio excepcional.",
       image: cargaTerrestreImg
     },
-    {
-      title: "Logística Integrada",
-      description: "Servicios completos de almacenamiento, inventario y distribución.",
-      fullDescription: "Ofrecemos soluciones logísticas integrales que incluyen almacenamiento, gestión de inventarios, preparación de pedidos y distribución. Nuestros centros de distribución estratégicamente ubicados están equipados con la última tecnología para optimizar los procesos y garantizar la trazabilidad completa de tu mercancía desde el origen hasta el destino final.",
+    { 
+      title: "Operaciones Transfronterizas", 
+      description: "Cruces internacionales",
+      fullDescription: "Coordinamos y ejecutamos operaciones de comercio internacional con eficiencia y precisión. Facilitamos el cruce fronterizo, gestionamos con tu agente aduanal documentación y ofrecemos soluciones logísticas puerta a puerta en importación y exportación.",
       image: logisticaIntegradaImg
     },
-    {
-      title: "Transporte Refrigerado",
-      description: "Cadena de frío para productos perecederos y farmacéuticos.",
-      fullDescription: "Mantenemos la cadena de frío intacta para productos perecederos, farmacéuticos y otros que requieren temperatura controlada. Nuestros vehículos refrigerados cuentan con sistemas de monitoreo continuo de temperatura y humedad, garantizando que tus productos lleguen en perfectas condiciones. Cumplimos con todas las normativas sanitarias y de calidad.",
+    { 
+      title: "Bodega de Transbordos", 
+      description: "Consolidación de cargas",
+      fullDescription: "Soluciones de envío personalizadas para Estados Unidos, tanto nacionales como transfronterizas, guiadas por los mejores expertos en logística del país.",
       image: transporteRefrigeradoImg
     },
-    {
-      title: "Carga Peligrosa",
-      description: "Manejo especializado de materiales peligrosos con certificaciones.",
-      fullDescription: "Somos especialistas en el transporte de materiales peligrosos con todas las certificaciones y permisos requeridos. Nuestro personal está altamente capacitado en el manejo de sustancias químicas, gases, líquidos inflamables y otros materiales que requieren cuidados especiales. Cumplimos estrictamente con todas las regulaciones nacionales e internacionales.",
-      image: cargaPeligrosaImg
-    },
-    {
-      title: "Mudanzas Corporativas",
-      description: "Traslado de oficinas y equipos empresariales con máxima seguridad.",
-      fullDescription: "Facilitamos el traslado de oficinas y equipos empresariales con un servicio especializado que minimiza el tiempo de inactividad de tu empresa. Nos encargamos del embalaje, transporte y montaje de equipos de oficina, servidores, mobiliario y documentos importantes. Planificamos cada mudanza corporativa para garantizar una transición sin contratiempos.",
+    { 
+      title: "Remolque de Plataforma", 
+      description: "Carga especializada",
+      fullDescription: "Ofrecemos transporte seguro y eficiente en plataformas de carga para todo tipo de mercancía sobredimensionada o de gran volumen. Nuestro servicio garantiza rutas optimizadas, cumplimiento normativo y manejo especializado para asegurar que tu carga llegue a destino a tiempo y en perfectas condiciones.",
       image: mudanzasCorporativasImg
     },
-    {
-      title: "Transporte Urgente",
-      description: "Entregas express para situaciones que requieren rapidez excepcional.",
-      fullDescription: "Para situaciones que requieren máxima rapidez, ofrecemos nuestro servicio de transporte urgente con tiempos de respuesta inmediatos. Contamos con vehículos dedicados y rutas prioritarias para garantizar la entrega en el menor tiempo posible. Ideal para repuestos críticos, documentos importantes y mercancías de emergencia.",
-      image: transporteUrgenteImg
+    { 
+      title: "Caja seca", 
+      description: "Transporte general",
+      fullDescription: "Servicio de carga en caja seca, seguro, eficiente y optimizado para todo tipo de mercancía no perecedera. Operamos bajo estrictos estándares de calidad y cumplimiento normativo, garantizando entregas puntuales y confiables.",
+      image: truckLoading
     },
-    {
-      title: "Seguimiento GPS",
-      description: "Monitoreo en tiempo real de tu carga durante todo el trayecto.",
-      fullDescription: "Todos nuestros vehículos están equipados con sistemas de seguimiento GPS de última generación que te permiten monitorear tu carga en tiempo real. Recibirás actualizaciones constantes sobre la ubicación, velocidad, rutas tomadas y tiempo estimado de llegada. Nuestro centro de control opera 24/7 para garantizar la seguridad de tu mercancía.",
+    { 
+      title: "LTL", 
+      description: "Less Than Truckload",
+      fullDescription: "Evita demoras y costos innecesarios en tus envíos pequeños. Nuestro equipo experto se encarga de asignar tu carga al equipo especializado ideal, optimizando tiempos y eficiencia logística.",
+      image: segurosIntegralesImg
+    },
+    { 
+      title: "Almacenaje", 
+      description: "Gestión de inventarios",
+      fullDescription: "Conectamos cada envío con el proveedor ideal regional, superregional o nacional, dentro de nuestra red especializada, para ofrecer servicios LTL confiables y rentables.",
       image: seguimientoGpsImg
     },
-    {
-      title: "Seguros Integrales",
-      description: "Cobertura completa para proteger tu mercancía contra cualquier eventualidad.",
-      fullDescription: "Protegemos tu inversión con seguros integrales que cubren todo tipo de eventualidades durante el transporte. Nuestras pólizas incluyen cobertura por daños, pérdidas, robos y demoras. Trabajamos con las mejores aseguradoras para ofrecerte tranquilidad total y la certeza de que tu mercancía está completamente protegida.",
-      image: segurosIntegralesImg
+    { 
+      title: "Contenedores", 
+      description: "Transporte marítimo",
+      fullDescription: "Reduce retrasos y costos innecesarios gracias a una visibilidad completa desde puerto a puerto, comunicación anticipada y una amplia red que conecta todos los terminales y rampas principales.",
+      image: logisticaIntegradaImg
     }
   ];
 
-  const handleFeatureClick = (index: number) => {
-    setSelectedFeature(index);
+  const handleServiceClick = (index: number) => {
+    setSelectedService(index);
   };
 
   const closeModal = () => {
-    setSelectedFeature(null);
+    setSelectedService(null);
   };
 
   return (
@@ -82,22 +81,17 @@ const TransportesSection2 = () => {
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-brand-brown p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-brand-cream text-sm leading-relaxed mb-6">
-                  {feature.description}
-                </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <div key={index} className="bg-brand-brown rounded-lg p-6 text-center space-y-4">
+                <h3 className="text-lg font-medium text-white">{service.title}</h3>
                 <Button 
-                  onClick={() => handleFeatureClick(index)}
                   variant="pill-white" 
-                  size="sm" 
-                  className="w-full hover-scale"
+                  size="sm"
+                  className="rounded-full px-8 w-full"
+                  onClick={() => handleServiceClick(index)}
                 >
-                  Más Info
+                  <span className="text-lg">→</span>
                 </Button>
               </div>
             ))}
@@ -106,13 +100,13 @@ const TransportesSection2 = () => {
       </section>
 
       {/* Modal */}
-      {selectedFeature !== null && (
+      {selectedService !== null && (
         <TransportModal
-          isOpen={selectedFeature !== null}
+          isOpen={selectedService !== null}
           onClose={closeModal}
-          title={features[selectedFeature].title}
-          description={features[selectedFeature].fullDescription}
-          serviceImage={features[selectedFeature].image}
+          title={services[selectedService].title}
+          description={services[selectedService].fullDescription}
+          serviceImage={services[selectedService].image}
         />
       )}
     </>
