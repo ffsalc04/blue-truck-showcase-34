@@ -15,51 +15,51 @@ const Section2 = () => {
 
   const services = [
     { 
-      title: "Transporte Terrestre", 
-      description: "Servicio nacional",
-      fullDescription: "Nuestro servicio de transporte terrestre ofrece cobertura nacional completa con una flota moderna y conductores certificados. Garantizamos entregas seguras y puntuales en todo el territorio, adaptándonos a las necesidades específicas de cada cliente y tipo de carga.",
+      title: "Caja refrigerada", 
+      description: "Transporte con temperatura controlada",
+      fullDescription: "Nuestro servicio de caja refrigerada mantiene la cadena de frío intacta para productos perecederos, farmacéuticos y otros que requieren temperatura controlada. Contamos con vehículos especializados y sistemas de monitoreo continuo.",
       image: cargaTerrestreImg
     },
     { 
-      title: "Logística Integral", 
-      description: "Soluciones completas",
-      fullDescription: "Ofrecemos servicios logísticos integrales que incluyen almacenamiento, gestión de inventarios, preparación de pedidos y distribución. Nuestros centros estratégicamente ubicados optimizan tiempos y costos para tu cadena de suministro.",
+      title: "Operaciones Transfronterizas", 
+      description: "Cruces internacionales",
+      fullDescription: "Especialistas en operaciones transfronterizas entre México, Estados Unidos y Canadá. Manejamos toda la documentación aduanera y cumplimos con las regulaciones internacionales para garantizar cruces sin contratiempos.",
       image: logisticaIntegradaImg
     },
     { 
-      title: "Carga Especializada", 
-      description: "Mercancías delicadas",
-      fullDescription: "Manejamos cargas que requieren cuidados especiales como productos refrigerados, materiales peligrosos, equipos sensibles y mercancías de alto valor. Contamos con personal capacitado y equipos especializados para cada tipo de carga.",
+      title: "Bodega de Transbordos", 
+      description: "Consolidación de cargas",
+      fullDescription: "Nuestras bodegas de transbordo optimizan la consolidación y desconsolidación de cargas. Facilitamos el intercambio eficiente entre diferentes modos de transporte y rutas de distribución.",
       image: transporteRefrigeradoImg
     },
     { 
-      title: "Distribución Urbana", 
-      description: "Última milla",
-      fullDescription: "Nuestro servicio de distribución urbana garantiza la entrega final de tu mercancía en centros urbanos. Optimizamos rutas y horarios para evitar congestión y asegurar entregas puntuales en la última milla del proceso logístico.",
+      title: "Remolque de Plataforma", 
+      description: "Carga especializada",
+      fullDescription: "Remolques de plataforma para el transporte de maquinaria pesada, equipos industriales y cargas de dimensiones especiales. Contamos con equipos especializados y personal capacitado para manejos complejos.",
       image: mudanzasCorporativasImg
     },
     { 
-      title: "Almacenamiento", 
-      description: "Centros de distribución",
-      fullDescription: "Disponemos de centros de almacenamiento y distribución equipados con la última tecnología en control de inventarios. Ofrecemos espacios seguros, clima controlado y sistemas de gestión que optimizan el flujo de tu mercancía.",
+      title: "Caja seca", 
+      description: "Transporte general",
+      fullDescription: "Servicio de caja seca para el transporte seguro de mercancía general. Nuestros remolques cerrados protegen la carga de las condiciones climáticas y garantizan la integridad de los productos.",
       image: truckLoading
     },
     { 
-      title: "Consultoría", 
-      description: "Optimización logística",
-      fullDescription: "Nuestros especialistas en logística analizan tu cadena de suministro para identificar oportunidades de mejora. Desarrollamos estrategias personalizadas que reducen costos, mejoran tiempos y optimizan tus procesos logísticos.",
+      title: "LTL", 
+      description: "Less Than Truckload",
+      fullDescription: "Servicio LTL (Less Than Truckload) para cargas que no requieren un remolque completo. Optimizamos costos consolidando múltiples envíos en una sola unidad, manteniendo la eficiencia y puntualidad.",
       image: segurosIntegralesImg
     },
     { 
-      title: "Tracking 24/7", 
-      description: "Monitoreo continuo",
-      fullDescription: "Sistema de seguimiento en tiempo real que te permite monitorear tu carga las 24 horas del día. Recibe actualizaciones instantáneas sobre ubicación, estado y tiempo estimado de llegada de tus envíos a través de nuestra plataforma digital.",
+      title: "Almacenaje", 
+      description: "Gestión de inventarios",
+      fullDescription: "Servicios de almacenaje con instalaciones modernas y seguras. Ofrecemos gestión de inventarios, preparación de pedidos y distribución desde nuestros centros estratégicamente ubicados.",
       image: seguimientoGpsImg
     },
     { 
-      title: "Soporte Técnico", 
-      description: "Asistencia especializada",
-      fullDescription: "Nuestro equipo de soporte técnico está disponible para resolver cualquier consulta o incidencia. Brindamos asistencia especializada en logística, documentación, seguimiento y resolución de problemas durante todo el proceso de transporte.",
+      title: "Contenedores", 
+      description: "Transporte marítimo",
+      fullDescription: "Manejo especializado de contenedores para comercio internacional. Coordinamos el transporte desde puertos hasta destino final, incluyendo servicios de desconsolidación y distribución.",
       image: logisticaIntegradaImg
     }
   ];
@@ -104,7 +104,7 @@ const Section2 = () => {
                     size="sm"
                     onClick={() => handleServiceClick(index)}
                   >
-                    Más Info
+                    →
                   </Button>
                 </div>
               ))}
