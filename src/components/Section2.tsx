@@ -19,10 +19,10 @@ const Section2 = () => {
       {/* Upper Half - Image with Text Overlay */}
       <div className="relative h-96">
         <div 
-          className="absolute inset-0 bg-cover bg-center rounded-b-lg"
+          className="absolute inset-0 bg-cover bg-center rounded-b-[3rem]"
           style={{ backgroundImage: `url(${seaport})` }}
         >
-          <div className="absolute inset-0 bg-black/50 rounded-b-lg"></div>
+          <div className="absolute inset-0 bg-black/50 rounded-b-[3rem]"></div>
         </div>
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white space-y-4">
