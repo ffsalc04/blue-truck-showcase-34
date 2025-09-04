@@ -17,49 +17,49 @@ const Section2 = () => {
     { 
       title: "Caja refrigerada", 
       description: "Transporte con temperatura controlada",
-      fullDescription: "Nuestro servicio de caja refrigerada mantiene la cadena de frío intacta para productos perecederos, farmacéuticos y otros que requieren temperatura controlada. Contamos con vehículos especializados y sistemas de monitoreo continuo.",
+      fullDescription: "Unidades de alto rendimiento con control de temperatura, diseñadas para cumplir con cada requisito: cumplen con FSMA y CARB, son rentables y reconocidas por brindar un servicio excepcional.",
       image: cargaTerrestreImg
     },
     { 
       title: "Operaciones Transfronterizas", 
       description: "Cruces internacionales",
-      fullDescription: "Especialistas en operaciones transfronterizas entre México, Estados Unidos y Canadá. Manejamos toda la documentación aduanera y cumplimos con las regulaciones internacionales para garantizar cruces sin contratiempos.",
+      fullDescription: "Coordinamos y ejecutamos operaciones de comercio internacional con eficiencia y precisión. Facilitamos el cruce fronterizo, gestionamos con tu agente aduanal documentación y ofrecemos soluciones logísticas puerta a puerta en importación y exportación.",
       image: logisticaIntegradaImg
     },
     { 
       title: "Bodega de Transbordos", 
       description: "Consolidación de cargas",
-      fullDescription: "Nuestras bodegas de transbordo optimizan la consolidación y desconsolidación de cargas. Facilitamos el intercambio eficiente entre diferentes modos de transporte y rutas de distribución.",
+      fullDescription: "Soluciones de envío personalizadas para Estados Unidos, tanto nacionales como transfronterizas, guiadas por los mejores expertos en logística del país.",
       image: transporteRefrigeradoImg
     },
     { 
       title: "Remolque de Plataforma", 
       description: "Carga especializada",
-      fullDescription: "Remolques de plataforma para el transporte de maquinaria pesada, equipos industriales y cargas de dimensiones especiales. Contamos con equipos especializados y personal capacitado para manejos complejos.",
+      fullDescription: "Ofrecemos transporte seguro y eficiente en plataformas de carga para todo tipo de mercancía sobredimensionada o de gran volumen. Nuestro servicio garantiza rutas optimizadas, cumplimiento normativo y manejo especializado para asegurar que tu carga llegue a destino a tiempo y en perfectas condiciones.",
       image: mudanzasCorporativasImg
     },
     { 
       title: "Caja seca", 
       description: "Transporte general",
-      fullDescription: "Servicio de caja seca para el transporte seguro de mercancía general. Nuestros remolques cerrados protegen la carga de las condiciones climáticas y garantizan la integridad de los productos.",
+      fullDescription: "Servicio de carga en caja seca, seguro, eficiente y optimizado para todo tipo de mercancía no perecedera. Operamos bajo estrictos estándares de calidad y cumplimiento normativo, garantizando entregas puntuales y confiables.",
       image: truckLoading
     },
     { 
       title: "LTL", 
       description: "Less Than Truckload",
-      fullDescription: "Servicio LTL (Less Than Truckload) para cargas que no requieren un remolque completo. Optimizamos costos consolidando múltiples envíos en una sola unidad, manteniendo la eficiencia y puntualidad.",
+      fullDescription: "Evita demoras y costos innecesarios en tus envíos pequeños. Nuestro equipo experto se encarga de asignar tu carga al equipo especializado ideal, optimizando tiempos y eficiencia logística.",
       image: segurosIntegralesImg
     },
     { 
       title: "Almacenaje", 
       description: "Gestión de inventarios",
-      fullDescription: "Servicios de almacenaje con instalaciones modernas y seguras. Ofrecemos gestión de inventarios, preparación de pedidos y distribución desde nuestros centros estratégicamente ubicados.",
+      fullDescription: "Conectamos cada envío con el proveedor ideal regional, superregional o nacional, dentro de nuestra red especializada, para ofrecer servicios LTL confiables y rentables.",
       image: seguimientoGpsImg
     },
     { 
       title: "Contenedores", 
       description: "Transporte marítimo",
-      fullDescription: "Manejo especializado de contenedores para comercio internacional. Coordinamos el transporte desde puertos hasta destino final, incluyendo servicios de desconsolidación y distribución.",
+      fullDescription: "Reduce retrasos y costos innecesarios gracias a una visibilidad completa desde puerto a puerto, comunicación anticipada y una amplia red que conecta todos los terminales y rampas principales.",
       image: logisticaIntegradaImg
     }
   ];
