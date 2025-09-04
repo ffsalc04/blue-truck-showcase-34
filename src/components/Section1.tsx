@@ -1,9 +1,16 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Truck, Shield, Clock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import cityNight from '@/assets/city-night.jpg';
 
 const Section1 = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contactanos');
+  };
+
   return (
     <section id="servicios" className="pt-8 pb-20 bg-brand-brown">
       <div className="container mx-auto px-6">
@@ -14,7 +21,7 @@ const Section1 = () => {
               <h2 className="text-2xl font-semibold text-white">Soluciones de transporte con precisión y confianza</h2>
             </div>
             <div className="flex-1 flex justify-center">
-              <Button variant="pill-white">
+              <Button variant="pill-white" onClick={handleContactClick}>
                 Empieza Hoy
               </Button>
             </div>
