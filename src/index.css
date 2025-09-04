@@ -118,11 +118,11 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-title font-medium;
+    @apply font-title font-normal;
   }
 
   h1 {
-    @apply font-semibold;
+    @apply font-medium;
   }
 }
 
