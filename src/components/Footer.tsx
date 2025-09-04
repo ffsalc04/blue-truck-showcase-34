@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, FileText, Shield, Info } from 'lucide-react';
+import { Phone, Mail, MapPin, FileText, Shield } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,87 +10,54 @@ const Footer = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
-          {/* Contact Information */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-brand-light-blue">Contacto</h3>
+        <div className="grid md:grid-cols-2 gap-12 text-white">
+          {/* Column 1 - Office & Contact Information */}
+          <div className="space-y-8">
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-brand-light-blue" />
-                <span>+1 (555) 123-4567</span>
+              <h3 className="text-xl font-medium text-brand-light-blue">Nuestra oficina:</h3>
+              
+              <div className="space-y-2">
+                <h4 className="text-lg font-medium">Guadalajara</h4>
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-brand-light-blue mt-1 flex-shrink-0" />
+                  <span>Av. Circunvalación 1335, Jardines del Country, C.P 44610 Guadalajara, Jal.</span>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-brand-light-blue" />
-                <span>contacto@empresa.com</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 text-brand-light-blue" />
-                <span>Av. Principal 123, Ciudad</span>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-xl font-medium text-brand-light-blue">Contacto Directo</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-brand-light-blue" />
+                  <span>contact@toregoglobal.com</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="h-5 w-5 text-brand-light-blue" />
+                  <span>(+52) 33 4086 0672</span>
+                </div>
               </div>
             </div>
           </div>
           
-          {/* Services */}
+          {/* Column 2 - Legal Links */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-brand-light-blue">Servicios</h3>
-            <div className="space-y-2">
-              <a href="#" className="block hover:text-brand-light-blue transition-colors">
-                Transporte Terrestre
-              </a>
-              <a href="#" className="block hover:text-brand-light-blue transition-colors">
-                Logística Integral
-              </a>
-              <a href="#" className="block hover:text-brand-light-blue transition-colors">
-                Carga Especializada
-              </a>
-              <a href="#" className="block hover:text-brand-light-blue transition-colors">
-                Distribución
-              </a>
-            </div>
-          </div>
-          
-          {/* Legal */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-brand-light-blue">Legal</h3>
-            <div className="space-y-2">
+            <div className="space-y-4">
               <a href="#" className="flex items-center gap-2 hover:text-brand-light-blue transition-colors">
                 <FileText className="h-4 w-4" />
                 Términos y Condiciones
               </a>
               <a href="#" className="flex items-center gap-2 hover:text-brand-light-blue transition-colors">
                 <Shield className="h-4 w-4" />
-                Política de Privacidad
-              </a>
-              <a href="#" className="flex items-center gap-2 hover:text-brand-light-blue transition-colors">
-                <Info className="h-4 w-4" />
-                Política de Cookies
-              </a>
-            </div>
-          </div>
-          
-          {/* Company */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-brand-light-blue">Empresa</h3>
-            <div className="space-y-2">
-              <a href="#" className="block hover:text-brand-light-blue transition-colors">
-                Sobre Nosotros
-              </a>
-              <a href="#" className="block hover:text-brand-light-blue transition-colors">
-                Nuestra Historia
-              </a>
-              <a href="#" className="block hover:text-brand-light-blue transition-colors">
-                Certificaciones
-              </a>
-              <a href="#" className="block hover:text-brand-light-blue transition-colors">
-                Trabajar con Nosotros
+                Aviso de Privacidad
               </a>
             </div>
           </div>
         </div>
         
-        {/* Bottom Section */}
+        {/* Bottom Section - Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-600 text-center text-gray-400">
-          <p>&copy; 2024 Empresa de Transporte. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Torego Global. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
