@@ -105,7 +105,7 @@ const Section2 = () => {
                     className="rounded-full px-8 w-full"
                     onClick={() => handleServiceClick(index)}
                   >
-                    →
+                    <span className="text-lg">→</span>
                   </Button>
                 </div>
               ))}
