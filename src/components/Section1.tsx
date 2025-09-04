@@ -11,11 +11,11 @@ const Section1 = () => {
         <div className="mb-16">
           <div className="bg-gradient-to-r from-brand-blue to-brand-light-blue rounded-full px-8 py-4 flex items-center w-full">
             <div className="flex-[3] flex justify-center">
-              <h2 className="text-2xl font-bold text-white">Nuestros Servicios</h2>
+              <h2 className="text-2xl font-semibold text-white">Soluciones de transporte con precisión y confianza</h2>
             </div>
             <div className="flex-1 flex justify-center">
               <Button variant="pill-white">
-                Ver Más
+                Empieza Hoy
               </Button>
             </div>
           </div>
