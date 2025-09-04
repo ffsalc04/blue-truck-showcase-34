@@ -25,15 +25,18 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white space-y-6">
             <h1 className="text-5xl lg:text-6xl font-semibold leading-tight">
-              Aliados en logística portuaria, nacional y fronteriza: conectamos México con EE.UU. y Canadá
+              Transforma tu forma de mover carga
             </h1>
+            <p className="text-xl text-gray-200 max-w-2xl">
+              ¿Listo para empezar?
+            </p>
             <Button 
               variant="pill" 
               size="lg" 
               className="mt-8 rounded-full px-8"
               onClick={handleContactClick}
             >
-              Contáctanos →
+              Empieza a enviar hoy mismo →
             </Button>
           </div>
         </div>
