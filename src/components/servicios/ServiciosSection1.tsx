@@ -11,22 +11,22 @@ const ServiciosSection1 = () => {
   const services = [
     {
       title: "Servicios Nacionales",
-      description: "Transporte y logística dentro del territorio nacional con cobertura completa y entregas garantizadas en todo México.",
+      description: "Movemos tus productos a lo largo de todo México con estrategias logísticas pensadas para cada destino. Priorizamos la velocidad, confiabilidad y adaptación a tus operaciones. Nuestra red sólida y herramientas tecnológicas nos permiten ofrecer un servicio ágil, alineado a las necesidades específicas de tu negocio.",
       image: tollHighway
     },
     {
       title: "Servicios Internacionales", 
-      description: "Operaciones transfronterizas especializadas entre México, Estados Unidos y Canadá con gestión aduanera completa.",
+      description: "Llevamos tus productos más allá de las fronteras con soluciones diseñadas para simplificar cada paso del proceso. Desde la coordinación de envíos, monitoreo y colaboración con el agente aduanal de su elección, nos encargamos de que sus operaciones internacionales fluyan con precisión. Ya sea importación o exportación, aseguramos entregas seguras, puntuales y en cumplimiento con las normativas internacionales.",
       image: highwayTrucks
     },
     {
       title: "Servicios Domésticos",
-      description: "Soluciones de distribución local y regional para entregas eficientes en centros urbanos y zonas metropolitanas.",
+      description: "En Torego, conectamos cada punto del país con precisión. Nos especializamos en trasladar tu carga dentro del territorio nacional con agilidad, seguridad y eficiencia. Conectamos rutas inteligentes que se ajustan a lo que tu negocio necesita, reduciendo tiempos y mejorando resultados.",
       image: shipContainers
     },
     {
       title: "Servicios Especializados",
-      description: "Transporte de cargas que requieren manejo especial como productos refrigerados, peligrosos o de alto valor.",
+      description: "Transportamos tus productos con soluciones de transporte terrestre adaptado a tus necesidades. Contamos con distintos tipos de equipo de arrastre: contenedores, plataformas, fulles, refrigerados, servicio intermodal, gestión aduanal y manejo de materiales peligrosos hazmat o químicos.",
       image: truckLoading
     }
   ];
