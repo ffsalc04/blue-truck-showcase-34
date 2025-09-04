@@ -29,7 +29,7 @@ const TransportesHero = () => {
         <p className="text-xl lg:text-2xl text-gray-200 max-w-2xl mx-auto">
           ¿Listo para empezar?
         </p>
-        <Button variant="pill" size="lg" className="mt-8" onClick={handleContactClick}>
+        <Button variant="pill-white" size="lg" className="mt-8" onClick={handleContactClick}>
           Empieza a enviar hoy mismo
         </Button>
       </div>
