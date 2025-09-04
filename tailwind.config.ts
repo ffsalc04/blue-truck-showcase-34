@@ -73,8 +73,8 @@ export default {
 			},
 			fontFamily: {
 				'title': ['IBM Plex Sans', 'sans-serif'],
-				'body': ['Noto Sans', 'sans-serif'],
-				'sans': ['Noto Sans', 'sans-serif']
+				'body': ['Noto Sans Old Italic', 'serif'],
+				'sans': ['Noto Sans Old Italic', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
