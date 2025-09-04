@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Truck, Shield, Clock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import cityNight from '@/assets/city-night.jpg';
 
@@ -51,33 +50,25 @@ const Section1 = () => {
 
         {/* Bottom Section - Key Selling Points */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg p-8 text-center space-y-4">
-            <div className="flex justify-center">
-              <Truck className="h-12 w-12 text-brand-blue" />
-            </div>
-            <h4 className="text-xl font-bold text-brand-brown">Flota Moderna</h4>
+          <div className="bg-white rounded-lg p-8 space-y-4">
+            <h4 className="text-xl font-medium text-brand-brown">Entregas puntuales y eficientes</h4>
             <p className="text-gray-600">
-              Vehículos equipados con GPS y sistemas de monitoreo en tiempo real
+              Nuestros servicios se caracterizan por su meticulosidad. Torego fue diseñado para garantizar entregas rápidas y a tiempo. 
+              Nos adaptamos a tu agenda, asegurando que tus envíos lleguen a su destino sin contratiempos.
             </p>
           </div>
           
-          <div className="bg-white rounded-lg p-8 text-center space-y-4">
-            <div className="flex justify-center">
-              <Shield className="h-12 w-12 text-brand-blue" />
-            </div>
-            <h4 className="text-xl font-bold text-brand-brown">Seguridad Total</h4>
+          <div className="bg-white rounded-lg p-8 space-y-4">
+            <h4 className="text-xl font-medium text-brand-brown">Soluciones accesibles</h4>
             <p className="text-gray-600">
-              Protocolos de seguridad certificados y seguros integrales
+              Porque la efectividad está en el centro de nuestra filosofía de servicio. Aprovecha nuestras tarifas competitivas y estructuras de precios transparentes que te ayudan a optimizar tus gastos logísticos.
             </p>
           </div>
           
-          <div className="bg-white rounded-lg p-8 text-center space-y-4">
-            <div className="flex justify-center">
-              <Clock className="h-12 w-12 text-brand-blue" />
-            </div>
-            <h4 className="text-xl font-bold text-brand-brown">Puntualidad</h4>
+          <div className="bg-white rounded-lg p-8 space-y-4">
+            <h4 className="text-xl font-medium text-brand-brown">Tu carga en manos expertas</h4>
             <p className="text-gray-600">
-              Entregas a tiempo garantizadas con seguimiento 24/7
+              Porque la efectividad está en el centro de nuestra filosofía de servicio. Aprovecha nuestras tarifas competitivas y estructuras de precios transparentes que te ayudan a optimizar tus gastos logísticos.
             </p>
           </div>
         </div>
