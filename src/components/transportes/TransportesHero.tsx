@@ -1,8 +1,15 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import highwayTruck from '@/assets/highway-truck.jpg';
 
 const TransportesHero = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contactanos');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       {/* Background Image */}
@@ -16,15 +23,14 @@ const TransportesHero = () => {
       {/* Content - Centered */}
       <div className="relative z-10 text-center text-white space-y-6 max-w-4xl px-6">
         <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-          Transportes
-          <span className="block text-brand-light-blue">Especializados</span>
+          Transforma tu forma de
+          <span className="block text-brand-light-blue">mover carga</span>
         </h1>
         <p className="text-xl lg:text-2xl text-gray-200 max-w-2xl mx-auto">
-          Conectamos destinos con seguridad, eficiencia y puntualidad. 
-          Tu carga en las mejores manos del transporte profesional.
+          ¿Listo para empezar?
         </p>
-        <Button variant="pill" size="lg" className="mt-8">
-          Solicitar Servicio
+        <Button variant="pill" size="lg" className="mt-8" onClick={handleContactClick}>
+          Empieza a enviar hoy mismo
         </Button>
       </div>
     </section>
