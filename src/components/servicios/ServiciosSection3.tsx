@@ -1,23 +1,23 @@
 import React from 'react';
-import { Shield, Clock, Award } from 'lucide-react';
+import { Users, Network, Settings } from 'lucide-react';
 import cargoFlight from '@/assets/cargo-flight.jpg';
 
 const ServiciosSection3 = () => {
   const advantages = [
     {
-      icon: Shield,
-      title: "Seguridad Garantizada",
-      description: "Seguros completos y protocolos de seguridad certificados internacionalmente"
+      icon: Users,
+      title: "Especialistas que entienden tu camino",
+      description: "Nuestro equipo no solo resuelve retos logísticos: los anticipa. Con un profundo conocimiento de tu industria y una visión estratégica, te acompañamos en cada paso, ofreciendo soluciones que marcan la diferencia, incluso en los escenarios más exigentes."
     },
     {
-      icon: Clock,
-      title: "Entrega Puntual",
-      description: "Cumplimiento del 99.5% en tiempos de entrega acordados con nuestros clientes"
+      icon: Network,
+      title: "Conectividad",
+      description: "Complementamos tus operaciones con nuestra red de transporte y clientes para fortalecer la logística, eficientar las rutas y ofrecer servicios competitivos."
     },
     {
-      icon: Award,
-      title: "Calidad Premium",
-      description: "Certificaciones ISO y reconocimientos por excelencia en servicios logísticos"
+      icon: Settings,
+      title: "Estrategias hechas para ti",
+      description: "Creamos soluciones logísticas ajustadas a las particularidades de tu operación, combinando distintos métodos de transporte con herramientas tecnológicas que impulsan eficiencia y control."
     }
   ];
 
@@ -55,11 +55,11 @@ const ServiciosSection3 = () => {
         </div>
       </div>
       
-      {/* Lower half - Blue background */}
-      <div className="bg-brand-blue py-16">
+      {/* Lower half - Dark Blue background */}
+      <div className="bg-brand-dark-blue py-16">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-12">
-            ¿Por qué elegirnos?
+          <h2 className="text-4xl font-semibold text-white mb-12">
+            ¿Qué nos hace destacar en el mundo de la logística?
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -68,9 +68,9 @@ const ServiciosSection3 = () => {
               return (
                 <div key={index} className="text-white space-y-4">
                   <div className="flex justify-center">
-                    <IconComponent size={48} className="text-brand-light-blue" />
+                    <IconComponent size={48} className="text-white" fill="white" />
                   </div>
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl font-medium">
                     {advantage.title}
                   </h3>
                   <p className="text-gray-100 leading-relaxed">
