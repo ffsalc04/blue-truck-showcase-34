@@ -83,16 +83,25 @@ const TransportesSection2 = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-brand-brown rounded-lg p-6 text-center space-y-4">
-                <h3 className="text-lg font-medium text-white">{service.title}</h3>
-                <Button 
-                  variant="pill-white" 
-                  size="sm"
-                  className="rounded-full px-8 w-full"
-                  onClick={() => handleServiceClick(index)}
-                >
-                  <span className="text-lg">→</span>
-                </Button>
+              <div key={index} className="bg-brand-brown rounded-lg overflow-hidden text-center">
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 space-y-4">
+                  <h3 className="text-lg font-medium text-white">{service.title}</h3>
+                  <Button 
+                    variant="pill-white" 
+                    size="sm"
+                    className="rounded-full px-8 w-full"
+                    onClick={() => handleServiceClick(index)}
+                  >
+                    <span className="text-lg">→</span>
+                  </Button>
+                </div>
               </div>
             ))}
           </div>
