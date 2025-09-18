@@ -10,7 +10,7 @@ const Footer = () => {
         <img 
           src={whiteBoxVector} 
           alt="White Box Vector"
-          className="h-full w-full object-contain transform -skew-x-12 -translate-x-8"
+          className="h-full w-full object-contain -translate-x-8"
         />
       </div>
       

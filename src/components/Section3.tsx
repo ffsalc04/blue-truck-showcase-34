@@ -41,20 +41,20 @@ const Section3 = () => {
           
           {/* Right Half - Logos */}
           <div className="flex flex-col space-y-8">
-            <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center h-40">
-              <div className="text-center space-y-2">
-                <Award className="h-16 w-16 text-brand-blue mx-auto" />
-                <p className="text-brand-brown font-semibold">Ministerio de Transporte</p>
-                <p className="text-sm text-gray-600">Certificación Nacional</p>
-              </div>
+            <div className="flex items-center justify-center">
+              <img 
+                src="/src/assets/certification-ctpat.png" 
+                alt="CTPAT Certification" 
+                className="max-h-48 w-auto"
+              />
             </div>
             
-            <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center h-40">
-              <div className="text-center space-y-2">
-                <FileCheck className="h-16 w-16 text-brand-blue mx-auto" />
-                <p className="text-brand-brown font-semibold">ISO Certification</p>
-                <p className="text-sm text-gray-600">Calidad Certificada</p>
-              </div>
+            <div className="flex items-center justify-center">
+              <img 
+                src="/src/assets/certification-oea.png" 
+                alt="OEA Certification" 
+                className="max-h-48 w-auto"
+              />
             </div>
           </div>
         </div>
