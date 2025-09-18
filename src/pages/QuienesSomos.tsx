@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import quienesSomosTop from '@/assets/quienes-somos-top.png';
-import seaport from '@/assets/seaport.jpg';
+import quienesSomosMiddle from '@/assets/quienes-somos-middle.png';
 import truckLoading from '@/assets/truck-loading.jpg';
 
 const QuienesSomos = () => {
@@ -51,8 +51,8 @@ const QuienesSomos = () => {
             </div>
             <div>
               <img 
-                src={seaport} 
-                alt="Puerto marítimo" 
+                src={quienesSomosMiddle} 
+                alt="Quiénes somos" 
                 className="w-full h-80 object-cover rounded-lg"
               />
             </div>
