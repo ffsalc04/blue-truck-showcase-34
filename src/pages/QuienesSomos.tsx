@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import truckDriver from '@/assets/truck-driver.jpg';
+import quienesSomosTop from '@/assets/quienes-somos-top.png';
 import seaport from '@/assets/seaport.jpg';
 import truckLoading from '@/assets/truck-loading.jpg';
 
@@ -22,7 +22,7 @@ const QuienesSomos = () => {
       <section className="relative min-h-96 flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${truckDriver})` }}
+          style={{ backgroundImage: `url(${quienesSomosTop})` }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
