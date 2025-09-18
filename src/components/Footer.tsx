@@ -1,12 +1,17 @@
 import React from 'react';
 import { Phone, Mail, MapPin, FileText, Shield } from 'lucide-react';
+import whiteBoxVector from '@/assets/vectors/white-box.png';
 
 const Footer = () => {
   return (
     <footer className="bg-brand-brown py-16 relative overflow-hidden">
-      {/* Semi-transparent vector graphic */}
-      <div className="absolute left-0 top-0 h-full w-64 opacity-10">
-        <div className="h-full w-full bg-white transform -skew-x-12 -translate-x-8"></div>
+      {/* White box vector graphic */}
+      <div className="absolute left-0 top-0 h-full w-[48rem] opacity-10">
+        <img 
+          src={whiteBoxVector} 
+          alt="White Box Vector"
+          className="h-full w-full object-contain transform -skew-x-12 -translate-x-8"
+        />
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
