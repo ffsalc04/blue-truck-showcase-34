@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import quienesSomosTop from '@/assets/quienes-somos-top.png';
 import quienesSomosMiddle from '@/assets/quienes-somos-middle.png';
-import truckLoading from '@/assets/truck-loading.jpg';
+import quienesSomosBottom from '@/assets/quienes-somos-bottom.png';
 
 const QuienesSomos = () => {
   const navigate = useNavigate();
@@ -92,8 +92,8 @@ const QuienesSomos = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src={truckLoading} 
-                alt="Equipo de trabajo" 
+                src={quienesSomosBottom} 
+                alt="El equipo de Torego Global" 
                 className="w-full h-80 object-cover rounded-lg"
               />
             </div>
