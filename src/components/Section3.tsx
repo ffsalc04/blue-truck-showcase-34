@@ -45,7 +45,7 @@ const Section3 = () => {
               <img 
                 src="/src/assets/certification-ctpat.png" 
                 alt="CTPAT Certification" 
-                className="max-h-32 w-auto"
+                className="max-h-48 w-auto"
               />
             </div>
             
@@ -53,7 +53,7 @@ const Section3 = () => {
               <img 
                 src="/src/assets/certification-oea.png" 
                 alt="OEA Certification" 
-                className="max-h-32 w-auto"
+                className="max-h-48 w-auto"
               />
             </div>
           </div>
