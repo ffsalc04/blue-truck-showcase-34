@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-brand-brown py-16 relative overflow-hidden">
       {/* White box vector graphic */}
-      <div className="absolute left-0 top-0 h-full w-64 opacity-10">
+      <div className="absolute left-0 top-0 h-full w-[48rem] opacity-10">
         <img 
           src={whiteBoxVector} 
           alt="White Box Vector"
