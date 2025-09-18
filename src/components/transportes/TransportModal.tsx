@@ -42,7 +42,7 @@ const TransportModal = ({ isOpen, onClose, title, description, serviceImage }: T
             <img 
               src={whiteBoxVector} 
               alt="White Box Vector"
-              className="w-full h-full object-contain opacity-10"
+              className="w-[120%] h-[120%] object-contain opacity-20"
             />
             
             {/* Service Image on top of vector */}
