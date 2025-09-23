@@ -34,7 +34,9 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-white/20 backdrop-blur-sm">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center">
-          <img src={logo} alt="Company Logo" className="h-8 w-auto" />
+          <Link to="/">
+            <img src={logo} alt="Company Logo" className="h-8 w-auto cursor-pointer" />
+          </Link>
         </div>
         
         <div className="hidden md:flex items-center space-x-8">

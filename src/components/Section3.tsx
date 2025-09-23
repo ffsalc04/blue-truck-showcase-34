@@ -43,7 +43,7 @@ const Section3 = () => {
           <div className="flex flex-col space-y-8">
             <div className="flex items-center justify-center">
               <img 
-                src="/src/assets/certification-ctpat.png" 
+                src="/certification-ctpat.png" 
                 alt="CTPAT Certification" 
                 className="max-h-48 w-auto"
               />
@@ -51,7 +51,7 @@ const Section3 = () => {
             
             <div className="flex items-center justify-center">
               <img 
-                src="/src/assets/certification-oea.png" 
+                src="/certification-oea.png" 
                 alt="OEA Certification" 
                 className="max-h-48 w-auto"
               />
