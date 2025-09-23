@@ -1,21 +1,23 @@
 import React from 'react';
-import { Users, Network, Settings } from 'lucide-react';
 import cargoFlight from '@/assets/cargo-flight.jpg';
+import medallaIcon from '@/assets/vectors/MEDALLA.png';
+import mundoIcon from '@/assets/vectors/MUNDO.png';
+import manoEstrellaIcon from '@/assets/vectors/MANO ESTRELLA.png';
 
 const ServiciosSection3 = () => {
   const advantages = [
     {
-      icon: Users,
+      icon: medallaIcon,
       title: "Especialistas que entienden tu camino",
       description: "Nuestro equipo no solo resuelve retos logísticos: los anticipa. Con un profundo conocimiento de tu industria y una visión estratégica, te acompañamos en cada paso, ofreciendo soluciones que marcan la diferencia, incluso en los escenarios más exigentes."
     },
     {
-      icon: Network,
+      icon: mundoIcon,
       title: "Conectividad",
       description: "Complementamos tus operaciones con nuestra red de transporte y clientes para fortalecer la logística, eficientar las rutas y ofrecer servicios competitivos."
     },
     {
-      icon: Settings,
+      icon: manoEstrellaIcon,
       title: "Estrategias hechas para ti",
       description: "Creamos soluciones logísticas ajustadas a las particularidades de tu operación, combinando distintos métodos de transporte con herramientas tecnológicas que impulsan eficiencia y control."
     }
@@ -64,11 +66,14 @@ const ServiciosSection3 = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {advantages.map((advantage, index) => {
-              const IconComponent = advantage.icon;
               return (
                 <div key={index} className="text-white space-y-4">
                   <div className="flex justify-center">
-                    <IconComponent size={48} className="text-white" fill="white" />
+                    <img 
+                      src={advantage.icon} 
+                      alt={advantage.title}
+                      className="w-12 h-12 object-contain"
+                    />
                   </div>
                   <h3 className="text-xl font-medium">
                     {advantage.title}
