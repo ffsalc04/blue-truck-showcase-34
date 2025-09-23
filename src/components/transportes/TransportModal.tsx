@@ -3,6 +3,14 @@ import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import whiteBoxVector from '@/assets/vectors/white-box.png';
+import bannerCajaRefrigerada from '@/assets/banners/banner-caja-refrigerada.png';
+import bannerCajaSeca from '@/assets/banners/banner-caja-seca.png';
+import bannerCargaParcial from '@/assets/banners/banner-carga-parcial.png';
+import bannerContenedores from '@/assets/banners/banner-contenedores.png';
+import bannerLtl from '@/assets/banners/banner-ltl.png';
+import bannerOperacionesNacionales from '@/assets/banners/banner-operaciones-nacionales.png';
+import bannerOperacionesTransfronterizas from '@/assets/banners/banner-operaciones-transfronterizas.png';
+import bannerRemolquePlataforma from '@/assets/banners/banner-remolque-de-plataforma.png';
 
 interface TransportModalProps {
   isOpen: boolean;
@@ -20,6 +28,21 @@ const TransportModal = ({ isOpen, onClose, title, description, serviceImage }: T
   const handleContactClick = () => {
     navigate('/contactanos');
     onClose();
+  };
+
+  // Map service titles to banner images
+  const getBannerImage = (serviceTitle: string) => {
+    const bannerMap: Record<string, string> = {
+      "Caja refrigerada": bannerCajaRefrigerada,
+      "Operaciones Transfronterizas": bannerOperacionesTransfronterizas,
+      "Operaciones Nacionales": bannerOperacionesNacionales,
+      "Remolque de Plataforma": bannerRemolquePlataforma,
+      "Caja seca": bannerCajaSeca,
+      "LTL": bannerLtl,
+      "Carga Parcial": bannerCargaParcial,
+      "Contenedores": bannerContenedores,
+    };
+    return bannerMap[serviceTitle] || bannerCajaSeca;
   };
 
   return (
@@ -73,6 +96,14 @@ const TransportModal = ({ isOpen, onClose, title, description, serviceImage }: T
         <div className="relative z-10 h-full flex items-center">
           <div className="w-1/2 p-12">
             <div className="max-w-2xl">
+              {/* Banner Image */}
+              <div className="mb-6">
+                <img 
+                  src={getBannerImage(title)} 
+                  alt={`${title} banner`}
+                  className="w-32 h-auto object-contain"
+                />
+              </div>
               <h2 className="text-5xl font-bold text-white mb-8">
                 {title}
               </h2>
