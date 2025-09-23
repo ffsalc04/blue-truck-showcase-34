@@ -28,7 +28,7 @@ const Section2 = () => {
       image: operacionesTransfronterizasImg
     },
     { 
-      title: "Bodega de Transbordos", 
+      title: "Operaciones Nacionales", 
       description: "Consolidación de cargas",
       fullDescription: "Soluciones de envío personalizadas para Estados Unidos, tanto nacionales como transfronterizas, guiadas por los mejores expertos en logística del país.",
       image: bodegaTransbordosImg
@@ -52,7 +52,7 @@ const Section2 = () => {
       image: ltlImg
     },
     { 
-      title: "Almacenaje", 
+      title: "Carga Parcial", 
       description: "Gestión de inventarios",
       fullDescription: "Conectamos cada envío con el proveedor ideal regional, superregional o nacional, dentro de nuestra red especializada, para ofrecer servicios LTL confiables y rentables.",
       image: almacenajeImg
