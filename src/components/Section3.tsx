@@ -1,5 +1,7 @@
 import React from 'react';
 import { Award, FileCheck } from 'lucide-react';
+import ctpatCertification from '@/assets/certification-ctpat.png';
+import oeaCertification from '@/assets/certification-oea.png';
 
 const Section3 = () => {
   return (
@@ -43,7 +45,7 @@ const Section3 = () => {
           <div className="flex flex-col space-y-8">
             <div className="flex items-center justify-center">
               <img 
-                src="/src/assets/certification-ctpat.png" 
+                src={ctpatCertification} 
                 alt="CTPAT Certification" 
                 className="max-h-48 w-auto"
               />
@@ -51,7 +53,7 @@ const Section3 = () => {
             
             <div className="flex items-center justify-center">
               <img 
-                src="/src/assets/certification-oea.png" 
+                src={oeaCertification} 
                 alt="OEA Certification" 
                 className="max-h-48 w-auto"
               />
