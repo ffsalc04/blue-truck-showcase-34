@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import TransportModal from '@/components/transportes/TransportModal';
-import seaport from '@/assets/seaport.jpg';
+import triBanner from '@/assets/tri-banner.png';
 import cajaRefrigeradaImg from '@/assets/transport/caja-refrigerada.jpg';
 import operacionesTransfronterizasImg from '@/assets/transport/operaciones-transfronterizas.jpg';
 import bodegaTransbordosImg from '@/assets/transport/bodega-de-transbordos.jpg';
@@ -80,7 +80,7 @@ const Section2 = () => {
         <div className="relative h-96 bg-brand-blue">
           <div 
             className="absolute inset-0 bg-cover bg-center rounded-b-[3rem]"
-            style={{ backgroundImage: `url(${seaport})` }}
+            style={{ backgroundImage: `url(${triBanner})` }}
           >
             <div className="absolute inset-0 bg-black/50 rounded-b-[3rem]"></div>
           </div>
