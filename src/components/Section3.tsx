@@ -3,20 +3,20 @@ import { Award, FileCheck } from 'lucide-react';
 
 const Section3 = () => {
   return (
-    <section id="certificaciones" className="py-20 bg-brand-navy">
+    <section id="certificaciones" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Half - Text Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl font-semibold text-white">
+            <h2 className="text-4xl font-semibold text-brand-brown">
               Calidad
             </h2>
             
-            <h3 className="text-2xl font-medium text-brand-light-blue">
+            <h3 className="text-2xl font-medium text-brand-blue">
               Certificaciones Internacionales en Seguridad Logística
             </h3>
             
-            <div className="space-y-6 text-gray-300 leading-relaxed">
+            <div className="space-y-6 text-gray-700 leading-relaxed">
               <p>
                 En Torego, la seguridad no es opcional, es un estándar. Colaboramos con socios comerciales que operan bajo las certificaciones más estrictas y reconocidas a nivel global, como CTPAT (Customs Trade Partnership Against Terrorism) y OEA (Operador Económico Autorizado). Gracias a esta alianza, garantizamos un entorno seguro y conforme para el movimiento de mercancías en México, Estados Unidos y Canadá.
               </p>
