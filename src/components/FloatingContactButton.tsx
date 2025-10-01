@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const FloatingContactButton = () => {
   const handleClick = () => {
     // WhatsApp number - adjust this to your actual number
-    const phoneNumber = '5215512345678'; // Format: country code + number without + or spaces
+    const phoneNumber = '523340860672'; // Format: country code + number without + or spaces
     const message = encodeURIComponent('Hola, me gustaría obtener más información sobre sus servicios.');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
