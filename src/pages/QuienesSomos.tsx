@@ -40,11 +40,11 @@ const QuienesSomos = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-brand-navy">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-lg text-gray-200 leading-relaxed mb-6">
                 Nuestro personal, ha impulsado el comercio entre México y Estados Unidos y Canadá 
                 con estrategias logísticas inteligentes, adaptadas a los retos del mercado moderno.
               </p>
