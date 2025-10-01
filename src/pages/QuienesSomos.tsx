@@ -87,7 +87,7 @@ const QuienesSomos = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-brand-navy">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -98,15 +98,15 @@ const QuienesSomos = () => {
               />
             </div>
             <div>
-              <h2 className="text-4xl text-brand-blue mb-6">
+              <h2 className="text-4xl text-brand-light-blue mb-6">
                 El Equipo
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-lg text-gray-200 leading-relaxed mb-6">
                 Somos un equipo de personas apasionadas por la logística, con amplia experiencia 
                 en transporte y comercio internacional, pero sobre todo, con un compromiso real 
                 por entender las necesidades de cada cliente.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-200 leading-relaxed">
                 Trabajamos hombro a hombro, combinando conocimiento, calidad y tecnología para 
                 ofrecer soluciones que no solo mueven mercancías, sino que facilitan la vida 
                 de quienes confían en nosotros.
