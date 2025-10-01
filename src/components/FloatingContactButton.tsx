@@ -13,7 +13,7 @@ const FloatingContactButton = () => {
   return (
     <Button
       onClick={handleClick}
-      className="group fixed bottom-6 right-6 z-50 h-14 rounded-full shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out hover:brightness-110 w-14 hover:w-auto hover:px-6 flex items-center justify-center"
+      className="group fixed bottom-6 right-6 z-50 h-14 rounded-full shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out w-14 hover:w-auto hover:px-6 flex items-center justify-center bg-primary/80 backdrop-blur-md border border-white/20 hover:bg-primary/90"
       variant="default"
       aria-label="Contact us via WhatsApp"
     >
