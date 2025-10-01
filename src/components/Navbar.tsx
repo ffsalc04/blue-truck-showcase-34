@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Consider scrolled if past 400px (typical hero height)
+      setIsScrolled(window.scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { href: '/', label: 'Inicio', key: 'inicio' },
@@ -35,7 +46,13 @@ const Navbar = () => {
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/">
-            <img src={logo} alt="Company Logo" className="h-8 w-auto cursor-pointer drop-shadow-lg brightness-0 invert" />
+            <img 
+              src={logo} 
+              alt="Company Logo" 
+              className={`h-8 w-auto cursor-pointer drop-shadow-lg transition-all duration-300 ${
+                isScrolled ? '' : 'brightness-0 invert'
+              }`} 
+            />
           </Link>
         </div>
         
