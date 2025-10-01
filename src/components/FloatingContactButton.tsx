@@ -13,15 +13,16 @@ const FloatingContactButton = () => {
   return (
     <Button
       onClick={handleClick}
-      className="group fixed bottom-6 right-6 z-50 h-14 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:brightness-110 w-14 hover:w-auto hover:px-6 overflow-hidden"
+      className="group fixed bottom-6 right-6 z-50 h-14 rounded-full shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out hover:brightness-110 w-14 hover:w-auto hover:px-6 flex items-center justify-center"
       variant="default"
-      size="icon"
       aria-label="Contact us via WhatsApp"
     >
-      <MessageCircle className="h-6 w-6 flex-shrink-0" fill="currentColor" />
-      <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap group-hover:ml-2">
-        Empieza Hoy
-      </span>
+      <div className="flex items-center justify-center">
+        <MessageCircle className="h-6 w-6 flex-shrink-0" fill="currentColor" />
+        <span className="w-0 overflow-hidden opacity-0 group-hover:w-24 group-hover:opacity-100 group-hover:ml-2 transition-all duration-500 ease-in-out whitespace-nowrap">
+          Empieza Hoy
+        </span>
+      </div>
     </Button>
   );
 };
