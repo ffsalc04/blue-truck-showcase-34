@@ -35,7 +35,9 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-brand-light-blue" />
-                  <span>contact@toregoglobal.com</span>
+                  <a href="mailto:contact@toregoglobal.com" className="hover:text-brand-light-blue transition-colors">
+                    contact@toregoglobal.com
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-brand-light-blue" />
