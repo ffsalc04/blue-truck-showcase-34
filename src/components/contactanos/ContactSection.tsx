@@ -13,7 +13,7 @@ const ContactSection = () => {
   const [volumeWeight, setVolumeWeight] = useState<'volume' | 'weight'>('volume');
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/1234567890', '_blank');
+    window.open('https://wa.me/523340860672', '_blank');
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {
