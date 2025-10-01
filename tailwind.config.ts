@@ -69,6 +69,7 @@ export default {
 				'brand-dark-brown': 'hsl(var(--brand-dark-brown))',
 				'brand-cream': 'hsl(var(--brand-cream))',
 				'brand-dark-blue': 'hsl(var(--brand-dark-blue))',
+				'brand-navy': 'hsl(var(--brand-navy))',
 				'navbar-bg': 'var(--navbar-bg)'
 			},
 			fontFamily: {
