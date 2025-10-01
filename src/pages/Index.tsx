@@ -14,8 +14,8 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <Divider />
-      <Section1 />
       <Section2 />
+      <Section1 />
       <Divider />
       <Section3 />
       <Divider />
