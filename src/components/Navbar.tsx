@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/">
-            <img src={logo} alt="Company Logo" className="h-8 w-auto cursor-pointer" />
+            <img src={logo} alt="Company Logo" className="h-8 w-auto cursor-pointer drop-shadow-lg" />
           </Link>
         </div>
         
