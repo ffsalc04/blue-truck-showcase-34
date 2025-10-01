@@ -87,7 +87,7 @@ const QuienesSomos = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 bg-brand-navy">
+      <section className="py-16" style={{ backgroundColor: '#21314d' }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
