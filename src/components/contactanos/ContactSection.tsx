@@ -108,22 +108,26 @@ const ContactSection = () => {
                     {/* Basic Contact Info */}
                     <div className="grid grid-cols-2 gap-4">
                       <Input
+                        name="nombre"
                         placeholder="Nombre completo"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         required
                       />
                       <Input
+                        name="empresa"
                         placeholder="Empresa"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         required
                       />
                       <Input
+                        name="email"
                         type="email"
                         placeholder="Correo electrónico"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         required
                       />
                       <Input
+                        name="telefono"
                         type="tel"
                         placeholder="Teléfono"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
@@ -137,7 +141,7 @@ const ContactSection = () => {
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div className="col-span-2">
-                          <Select>
+                          <Select name="tipoServicio">
                             <SelectTrigger className="bg-white/10 border-white/30 text-white">
                               <SelectValue placeholder="Tipo de Servicio Requerido" />
                             </SelectTrigger>
@@ -151,21 +155,25 @@ const ContactSection = () => {
                         </div>
 
                         <Input
+                          name="origen"
                           placeholder="Origen"
                           className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         />
                         <Input
+                          name="destino"
                           placeholder="Destino"
                           className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         />
 
                         <Input
+                          name="tipoUnidad"
                           placeholder="Tipo de Unidad Requerido (si aplica)"
                           className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         />
 
                         <div className="relative">
                           <Input
+                            name="fechaServicio"
                             type="date"
                             placeholder="Fecha de Servicio"
                             className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
@@ -208,6 +216,7 @@ const ContactSection = () => {
                             </button>
                           </div>
                           <Input
+                            name="estimacionCarga"
                             placeholder={volumeWeight === 'volume' ? 'Volumen estimado (m³)' : 'Peso estimado (kg)'}
                             className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                           />
@@ -217,13 +226,13 @@ const ContactSection = () => {
                           {/* Temperature Control */}
                           <div className="flex items-center justify-between">
                             <Label className="text-white text-sm">¿Requiere temperatura controlada?</Label>
-                            <Switch className="data-[state=checked]:bg-white" />
+                            <Switch name="temperaturaControlada" className="data-[state=checked]:bg-white" />
                           </div>
 
                           {/* Dangerous Cargo */}
                           <div className="flex items-center justify-between">
                             <Label className="text-white text-sm">¿Es carga peligrosa?</Label>
-                            <Switch className="data-[state=checked]:bg-white" />
+                            <Switch name="cargaPeligrosa" className="data-[state=checked]:bg-white" />
                           </div>
                         </div>
                       </div>
@@ -233,6 +242,7 @@ const ContactSection = () => {
                     <div className="space-y-3 pt-4 border-t border-white/20">
                       <Label className="text-white text-sm">Comentarios adicionales:</Label>
                       <Textarea
+                        name="comentarios"
                         placeholder="Ingrese cualquier información adicional sobre su solicitud..."
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 min-h-[100px]"
                         rows={4}
