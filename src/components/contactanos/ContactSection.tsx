@@ -17,9 +17,7 @@ const ContactSection = () => {
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted');
+    // Form will submit to Google Apps Script
     setShowForm(false);
   };
 
@@ -104,7 +102,12 @@ const ContactSection = () => {
                     </Button>
                   </div>
                   
-                  <form onSubmit={handleFormSubmit} className="space-y-6">
+                  <form 
+                    method="POST" 
+                    action="https://script.google.com/macros/s/AKfycby5KTQy-I9-gyu0ozHyLgOlkeiJNjjby8zGZDS79Yy7qRdbBtp4l1qKC8ddPsKqrE2m/exec"
+                    onSubmit={handleFormSubmit} 
+                    className="space-y-6"
+                  >
                     {/* Basic Contact Info */}
                     <div className="grid grid-cols-2 gap-4">
                       <Input
