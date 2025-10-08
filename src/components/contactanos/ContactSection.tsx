@@ -229,7 +229,17 @@ const ContactSection = () => {
                       </div>
                     </div>
 
-                    <Button 
+                    {/* Comments Section */}
+                    <div className="space-y-3 pt-4 border-t border-white/20">
+                      <Label className="text-white text-sm">Comentarios adicionales:</Label>
+                      <Textarea
+                        placeholder="Ingrese cualquier información adicional sobre su solicitud..."
+                        className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 min-h-[100px]"
+                        rows={4}
+                      />
+                    </div>
+
+                    <Button
                       type="submit" 
                       variant="pill-white" 
                       size="lg" 
