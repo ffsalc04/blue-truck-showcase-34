@@ -12,19 +12,60 @@ import cityNightMotion from '@/assets/city-night-motion.jpg';
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [volumeWeight, setVolumeWeight] = useState<'volume' | 'weight'>('volume');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [temperaturaControlada, setTemperaturaControlada] = useState(false);
+  const [cargaPeligrosa, setCargaPeligrosa] = useState(false);
   const { toast } = useToast();
 
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/523340860672', '_blank');
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    // Form will submit to Google Apps Script
-    setShowForm(false);
-    toast({
-      title: "¡Solicitud enviada!",
-      description: "Nos pondremos en contacto contigo pronto.",
-    });
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      
+      // Add switch values explicitly
+      formData.set('temperaturaControlada', temperaturaControlada ? 'Sí' : 'No');
+      formData.set('cargaPeligrosa', cargaPeligrosa ? 'Sí' : 'No');
+      formData.set('tipoCarga', volumeWeight === 'volume' ? 'Volumen' : 'Peso');
+
+      const response = await fetch(
+        'https://script.google.com/macros/s/AKfycby5KTQy-I9-gyu0ozHyLgOlkeiJNjjby8zGZDS79Yy7qRdbBtp4l1qKC8ddPsKqrE2m/exec',
+        {
+          method: 'POST',
+          body: formData,
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Error al enviar el formulario');
+      }
+
+      // Success - hide form and show success message
+      setShowForm(false);
+      toast({
+        title: "¡Solicitud enviada!",
+        description: "Nos pondremos en contacto contigo pronto.",
+      });
+      
+      // Reset form states
+      setTemperaturaControlada(false);
+      setCargaPeligrosa(false);
+      setVolumeWeight('volume');
+    } catch (error) {
+      // Error - show error message but keep form visible
+      toast({
+        title: "Error al enviar",
+        description: "Hubo un problema al enviar tu solicitud. Por favor, intenta nuevamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -235,13 +276,21 @@ const ContactSection = () => {
                           {/* Temperature Control */}
                           <div className="flex items-center justify-between">
                             <Label className="text-white text-sm">¿Requiere temperatura controlada?</Label>
-                            <Switch name="temperaturaControlada" className="data-[state=checked]:bg-white" />
+                            <Switch 
+                              checked={temperaturaControlada}
+                              onCheckedChange={setTemperaturaControlada}
+                              className="data-[state=checked]:bg-white" 
+                            />
                           </div>
 
                           {/* Dangerous Cargo */}
                           <div className="flex items-center justify-between">
                             <Label className="text-white text-sm">¿Es carga peligrosa?</Label>
-                            <Switch name="cargaPeligrosa" className="data-[state=checked]:bg-white" />
+                            <Switch 
+                              checked={cargaPeligrosa}
+                              onCheckedChange={setCargaPeligrosa}
+                              className="data-[state=checked]:bg-white" 
+                            />
                           </div>
                         </div>
                       </div>
@@ -263,8 +312,9 @@ const ContactSection = () => {
                       variant="pill-white" 
                       size="lg" 
                       className="w-full mt-8 hover-scale"
+                      disabled={isSubmitting}
                     >
-                      Enviar Solicitud
+                      {isSubmitting ? 'Enviando...' : 'Enviar Solicitud'}
                     </Button>
                   </form>
                 </div>
