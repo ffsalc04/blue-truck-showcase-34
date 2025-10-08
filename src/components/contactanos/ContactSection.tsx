@@ -6,11 +6,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Phone, MessageCircle, X, Calendar } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 import cityNightMotion from '@/assets/city-night-motion.jpg';
 
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [volumeWeight, setVolumeWeight] = useState<'volume' | 'weight'>('volume');
+  const { toast } = useToast();
 
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/523340860672', '_blank');
@@ -19,6 +21,10 @@ const ContactSection = () => {
   const handleFormSubmit = (e: React.FormEvent) => {
     // Form will submit to Google Apps Script
     setShowForm(false);
+    toast({
+      title: "¡Solicitud enviada!",
+      description: "Nos pondremos en contacto contigo pronto.",
+    });
   };
 
   return (
