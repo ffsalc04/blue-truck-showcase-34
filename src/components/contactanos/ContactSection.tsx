@@ -213,6 +213,8 @@ const ContactSection = () => {
                         type="email"
                         placeholder="Correo electrónico *"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        title="Ingrese un correo electrónico válido"
                         required
                       />
                       <Input
