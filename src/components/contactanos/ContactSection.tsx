@@ -546,11 +546,15 @@ const ContactSection = () => {
                           </div>
                           <Input
                             name="estimacionCarga"
-                            type="number"
-                            min="0"
-                            step="0.01"
+                            type="text"
+                            inputMode="decimal"
+                            pattern="[0-9]*\.?[0-9]*"
                             placeholder={volumeWeight === 'volume' ? 'Volumen estimado (m³)' : 'Peso estimado (kg)'}
                             className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
+                            onInput={(e) => {
+                              const target = e.target as HTMLInputElement;
+                              target.value = target.value.replace(/[^\d.]/g, '');
+                            }}
                           />
                         </div>
 
