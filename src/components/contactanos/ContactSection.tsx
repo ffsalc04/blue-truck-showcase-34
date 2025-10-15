@@ -5,8 +5,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
-import { Phone, MessageCircle, X, Calendar } from 'lucide-react';
+import { Phone, MessageCircle, X, Calendar as CalendarIcon } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { format } from 'date-fns';
+import { cn } from '@/lib/utils';
 import cityNightMotion from '@/assets/city-night-motion.jpg';
 
 const ContactSection = () => {
@@ -15,7 +19,20 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [temperaturaControlada, setTemperaturaControlada] = useState(false);
   const [cargaPeligrosa, setCargaPeligrosa] = useState(false);
+  const [date, setDate] = useState<Date>();
+  const [phone, setPhone] = useState('');
   const { toast } = useToast();
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, '').slice(0, 10);
+    setPhone(value);
+  };
+
+  const formatPhone = (value: string) => {
+    if (value.length <= 2) return value;
+    if (value.length <= 6) return `${value.slice(0, 2)} ${value.slice(2)}`;
+    return `${value.slice(0, 2)} ${value.slice(2, 6)} ${value.slice(6)}`;
+  };
 
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/523340860672', '_blank');
@@ -32,6 +49,21 @@ const ContactSection = () => {
       formData.set('temperaturaControlada', temperaturaControlada ? 'Sí' : 'No');
       formData.set('cargaPeligrosa', cargaPeligrosa ? 'Sí' : 'No');
       formData.set('tipoCarga', volumeWeight === 'volume' ? 'Volumen' : 'Peso');
+      
+      // Format phone number
+      formData.set('telefono', phone);
+      
+      // Format date
+      if (date) {
+        formData.set('fechaServicio', format(date, 'yyyy-MM-dd'));
+      }
+      
+      // Append unit to cargo estimation
+      const estimacionCarga = formData.get('estimacionCarga');
+      if (estimacionCarga) {
+        const unit = volumeWeight === 'volume' ? 'm³' : 'kg';
+        formData.set('estimacionCarga', `${estimacionCarga} ${unit}`);
+      }
 
       const response = await fetch(
         'https://script.google.com/macros/s/AKfycbxNd4NPqZE7yjXxf45OckXl73bwBtngC7ATW7pOgtOZzlPXjyWGPDAxc6brLE2DfsnV/exec',
@@ -56,6 +88,9 @@ const ContactSection = () => {
       setTemperaturaControlada(false);
       setCargaPeligrosa(false);
       setVolumeWeight('volume');
+      setDate(undefined);
+      setPhone('');
+      e.currentTarget.reset();
     } catch (error) {
       // Error - show error message but keep form visible
       toast({
@@ -161,12 +196,16 @@ const ContactSection = () => {
                         name="nombre"
                         placeholder="Nombre completo"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
+                        pattern="[A-Za-zÀ-ÿ\s]+"
+                        title="Solo se permiten letras"
                         required
                       />
                       <Input
                         name="empresa"
                         placeholder="Empresa"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
+                        pattern="[A-Za-z0-9À-ÿ\s]+"
+                        title="Solo se permiten letras y números"
                         required
                       />
                       <Input
@@ -179,8 +218,12 @@ const ContactSection = () => {
                       <Input
                         name="telefono"
                         type="tel"
-                        placeholder="Teléfono"
+                        placeholder="XX XXXX XXXX"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
+                        value={formatPhone(phone)}
+                        onChange={handlePhoneChange}
+                        pattern="\d{2}\s\d{4}\s\d{4}"
+                        title="Ingrese un número de 10 dígitos"
                         required
                       />
                     </div>
@@ -221,15 +264,30 @@ const ContactSection = () => {
                           className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         />
 
-                        <div className="relative">
-                          <Input
-                            name="fechaServicio"
-                            type="date"
-                            placeholder="Fecha de Servicio"
-                            className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
-                          />
-                          <Calendar className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300" size={16} />
-                        </div>
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <Button
+                              variant="outline"
+                              className={cn(
+                                "w-full justify-start text-left font-normal bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white",
+                                !date && "text-gray-300"
+                              )}
+                            >
+                              <CalendarIcon className="mr-2 h-4 w-4" />
+                              {date ? format(date, 'dd/MM/yyyy') : "Fecha de Servicio"}
+                            </Button>
+                          </PopoverTrigger>
+                          <PopoverContent className="w-auto p-0" align="start">
+                            <Calendar
+                              mode="single"
+                              selected={date}
+                              onSelect={setDate}
+                              disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
+                              initialFocus
+                              className="pointer-events-auto"
+                            />
+                          </PopoverContent>
+                        </Popover>
                       </div>
                     </div>
 
