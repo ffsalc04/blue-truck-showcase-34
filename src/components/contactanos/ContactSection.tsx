@@ -200,7 +200,7 @@ const ContactSection = () => {
                     className="space-y-6"
                   >
                     {/* Basic Contact Info */}
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <Input
                         name="nombre"
                         placeholder="Nombre completo *"
@@ -245,7 +245,7 @@ const ContactSection = () => {
                     <div className="space-y-4 pt-4 border-t border-white/20">
                       <h4 className="text-lg font-semibold text-white mb-3">Información del Servicio</h4>
                       
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="col-span-2">
                           <Select name="tipoServicio" required>
                             <SelectTrigger className="bg-white/10 border-white/30 text-white">
@@ -516,7 +516,7 @@ const ContactSection = () => {
                     <div className="space-y-4 pt-4 border-t border-white/20">
                       <h4 className="text-lg font-semibold text-white mb-3">Tipo de Carga</h4>
                       
-                      <div className="grid grid-cols-2 gap-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Volume/Weight Toggle */}
                         <div className="space-y-3">
                           <Label className="text-white text-sm">Estimación de carga:</Label>

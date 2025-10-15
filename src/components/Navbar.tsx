@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +60,7 @@ const Navbar = () => {
           </Link>
         </div>
         
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {getVisibleNavItems().map((item) => (
             <Link 
@@ -67,6 +72,29 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+
+        {/* Mobile Navigation */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild className="md:hidden">
+            <Button variant="ghost" size="icon" className="text-white">
+              <Menu className="h-6 w-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="bg-brand-blue w-[300px]">
+            <div className="flex flex-col space-y-6 mt-8">
+              {getVisibleNavItems().map((item) => (
+                <Link
+                  key={item.key}
+                  to={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-white text-lg font-medium hover:text-brand-light-blue transition-colors py-2"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   );

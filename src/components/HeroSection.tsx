@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white space-y-6">
-            <h1 className="text-4xl lg:text-5xl font-semibold leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
               Aliados en logística portuaria, nacional y fronteriza: conectamos México con EE.UU. y Canadá
             </h1>
             <Button 
