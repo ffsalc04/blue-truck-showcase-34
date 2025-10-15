@@ -50,11 +50,11 @@ const Footer = () => {
           {/* Column 2 - Legal Links */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <a href="#" className="flex items-center gap-2 hover:text-brand-light-blue transition-colors">
+              <a href="/legal" className="flex items-center gap-2 hover:text-brand-light-blue transition-colors">
                 <FileText className="h-4 w-4" />
                 Términos y Condiciones
               </a>
-              <a href="#" className="flex items-center gap-2 hover:text-brand-light-blue transition-colors">
+              <a href="/legal#privacidad" className="flex items-center gap-2 hover:text-brand-light-blue transition-colors">
                 <Shield className="h-4 w-4" />
                 Aviso de Privacidad
               </a>
