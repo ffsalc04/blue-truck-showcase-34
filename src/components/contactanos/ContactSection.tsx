@@ -546,6 +546,9 @@ const ContactSection = () => {
                           </div>
                           <Input
                             name="estimacionCarga"
+                            type="number"
+                            min="0"
+                            step="0.01"
                             placeholder={volumeWeight === 'volume' ? 'Volumen estimado (m³)' : 'Peso estimado (kg)'}
                             className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                           />
