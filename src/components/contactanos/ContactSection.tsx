@@ -75,7 +75,7 @@ const ContactSection = () => {
       }
 
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbxNd4NPqZE7yjXxf45OckXl73bwBtngC7ATW7pOgtOZzlPXjyWGPDAxc6brLE2DfsnV/exec',
+        'https://script.google.com/macros/s/AKfycby5KTQy-I9-gyu0ozHyLgOlkeiJNjjby8zGZDS79Yy7qRdbBtp4l1qKC8ddPsKqrE2m/exec',
         {
           method: 'POST',
           body: formData,
@@ -195,7 +195,7 @@ const ContactSection = () => {
                   
                   <form 
                     method="POST" 
-                    action="https://script.google.com/macros/s/AKfycbxNd4NPqZE7yjXxf45OckXl73bwBtngC7ATW7pOgtOZzlPXjyWGPDAxc6brLE2DfsnV/exec"
+                    action="https://script.google.com/macros/s/AKfycby5KTQy-I9-gyu0ozHyLgOlkeiJNjjby8zGZDS79Yy7qRdbBtp4l1qKC8ddPsKqrE2m/exec"
                     onSubmit={handleFormSubmit} 
                     className="space-y-6"
                   >
