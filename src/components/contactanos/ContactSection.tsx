@@ -34,6 +34,15 @@ const ContactSection = () => {
     return `${value.slice(0, 2)} ${value.slice(2, 6)} ${value.slice(6)}`;
   };
 
+  const validateEmail = (e: React.FocusEvent<HTMLInputElement>) => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (e.target.value && !emailPattern.test(e.target.value)) {
+      e.target.setCustomValidity('Por favor ingrese un correo electrónico válido con dominio (ejemplo: usuario@dominio.com)');
+    } else {
+      e.target.setCustomValidity('');
+    }
+  };
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/523340860672', '_blank');
   };
@@ -214,7 +223,9 @@ const ContactSection = () => {
                         placeholder="Correo electrónico *"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                        title="Ingrese un correo electrónico válido"
+                        onBlur={validateEmail}
+                        onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
+                        title="Ingrese un correo electrónico válido con dominio"
                         required
                       />
                       <Input
