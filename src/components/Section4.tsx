@@ -5,9 +5,12 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
+import { useNavigate } from 'react-router-dom';
 const Section4 = () => {
   const [showForm, setShowForm] = useState(false);
   const [volumeWeight, setVolumeWeight] = useState<'volume' | 'weight'>('volume');
+  const navigate = useNavigate();
+  
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/+523340860672', '_blank');
   };
@@ -53,7 +56,7 @@ const Section4 = () => {
                     WhatsApp
                   </Button>
                   
-                  <Button onClick={() => setShowForm(true)} variant="outline" size="lg" className="w-full border-white text-white hover:bg-white hover:text-brand-blue hover-scale bg-transparent">
+                  <Button onClick={() => navigate('/contactanos')} variant="outline" size="lg" className="w-full border-white text-white hover:bg-white hover:text-brand-blue hover-scale bg-transparent">
                     Formulario de Contacto
                   </Button>
                 </div>) : (/* Expanded State - Contact Form */
