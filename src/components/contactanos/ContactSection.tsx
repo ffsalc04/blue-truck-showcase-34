@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Phone, MessageCircle, X, Calendar as CalendarIcon } from 'lucide-react';
@@ -247,16 +247,224 @@ const ContactSection = () => {
                           </Select>
                         </div>
 
-                        <Input
-                          name="origen"
-                          placeholder="Origen"
-                          className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
-                        />
-                        <Input
-                          name="destino"
-                          placeholder="Destino"
-                          className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
-                        />
+                        <Select name="origen">
+                          <SelectTrigger className="bg-white/10 border-white/30 text-white">
+                            <SelectValue placeholder="Origen" />
+                          </SelectTrigger>
+                          <SelectContent className="bg-white border-gray-200 z-50 max-h-[300px]">
+                            <SelectGroup>
+                              <SelectLabel>México</SelectLabel>
+                              <SelectItem value="Aguascalientes">Aguascalientes</SelectItem>
+                              <SelectItem value="Baja California">Baja California</SelectItem>
+                              <SelectItem value="Baja California Sur">Baja California Sur</SelectItem>
+                              <SelectItem value="Campeche">Campeche</SelectItem>
+                              <SelectItem value="Chiapas">Chiapas</SelectItem>
+                              <SelectItem value="Chihuahua">Chihuahua</SelectItem>
+                              <SelectItem value="Coahuila">Coahuila</SelectItem>
+                              <SelectItem value="Colima">Colima</SelectItem>
+                              <SelectItem value="Durango">Durango</SelectItem>
+                              <SelectItem value="Guanajuato">Guanajuato</SelectItem>
+                              <SelectItem value="Guerrero">Guerrero</SelectItem>
+                              <SelectItem value="Hidalgo">Hidalgo</SelectItem>
+                              <SelectItem value="Jalisco">Jalisco</SelectItem>
+                              <SelectItem value="México">México</SelectItem>
+                              <SelectItem value="Michoacán">Michoacán</SelectItem>
+                              <SelectItem value="Morelos">Morelos</SelectItem>
+                              <SelectItem value="Nayarit">Nayarit</SelectItem>
+                              <SelectItem value="Nuevo León">Nuevo León</SelectItem>
+                              <SelectItem value="Oaxaca">Oaxaca</SelectItem>
+                              <SelectItem value="Puebla">Puebla</SelectItem>
+                              <SelectItem value="Querétaro">Querétaro</SelectItem>
+                              <SelectItem value="Quintana Roo">Quintana Roo</SelectItem>
+                              <SelectItem value="San Luis Potosí">San Luis Potosí</SelectItem>
+                              <SelectItem value="Sinaloa">Sinaloa</SelectItem>
+                              <SelectItem value="Sonora">Sonora</SelectItem>
+                              <SelectItem value="Tabasco">Tabasco</SelectItem>
+                              <SelectItem value="Tamaulipas">Tamaulipas</SelectItem>
+                              <SelectItem value="Tlaxcala">Tlaxcala</SelectItem>
+                              <SelectItem value="Veracruz">Veracruz</SelectItem>
+                              <SelectItem value="Yucatán">Yucatán</SelectItem>
+                              <SelectItem value="Zacatecas">Zacatecas</SelectItem>
+                              <SelectItem value="Ciudad de México">Ciudad de México</SelectItem>
+                            </SelectGroup>
+                            <SelectGroup>
+                              <SelectLabel>USA</SelectLabel>
+                              <SelectItem value="Alabama">Alabama</SelectItem>
+                              <SelectItem value="Alaska">Alaska</SelectItem>
+                              <SelectItem value="Arizona">Arizona</SelectItem>
+                              <SelectItem value="Arkansas">Arkansas</SelectItem>
+                              <SelectItem value="California">California</SelectItem>
+                              <SelectItem value="Colorado">Colorado</SelectItem>
+                              <SelectItem value="Connecticut">Connecticut</SelectItem>
+                              <SelectItem value="Delaware">Delaware</SelectItem>
+                              <SelectItem value="Florida">Florida</SelectItem>
+                              <SelectItem value="Georgia">Georgia</SelectItem>
+                              <SelectItem value="Hawaii">Hawaii</SelectItem>
+                              <SelectItem value="Idaho">Idaho</SelectItem>
+                              <SelectItem value="Illinois">Illinois</SelectItem>
+                              <SelectItem value="Indiana">Indiana</SelectItem>
+                              <SelectItem value="Iowa">Iowa</SelectItem>
+                              <SelectItem value="Kansas">Kansas</SelectItem>
+                              <SelectItem value="Kentucky">Kentucky</SelectItem>
+                              <SelectItem value="Louisiana">Louisiana</SelectItem>
+                              <SelectItem value="Maine">Maine</SelectItem>
+                              <SelectItem value="Maryland">Maryland</SelectItem>
+                              <SelectItem value="Massachusetts">Massachusetts</SelectItem>
+                              <SelectItem value="Michigan">Michigan</SelectItem>
+                              <SelectItem value="Minnesota">Minnesota</SelectItem>
+                              <SelectItem value="Mississippi">Mississippi</SelectItem>
+                              <SelectItem value="Missouri">Missouri</SelectItem>
+                              <SelectItem value="Montana">Montana</SelectItem>
+                              <SelectItem value="Nebraska">Nebraska</SelectItem>
+                              <SelectItem value="Nevada">Nevada</SelectItem>
+                              <SelectItem value="New Hampshire">New Hampshire</SelectItem>
+                              <SelectItem value="New Jersey">New Jersey</SelectItem>
+                              <SelectItem value="New Mexico">New Mexico</SelectItem>
+                              <SelectItem value="New York">New York</SelectItem>
+                              <SelectItem value="North Carolina">North Carolina</SelectItem>
+                              <SelectItem value="North Dakota">North Dakota</SelectItem>
+                              <SelectItem value="Ohio">Ohio</SelectItem>
+                              <SelectItem value="Oklahoma">Oklahoma</SelectItem>
+                              <SelectItem value="Oregon">Oregon</SelectItem>
+                              <SelectItem value="Pennsylvania">Pennsylvania</SelectItem>
+                              <SelectItem value="Rhode Island">Rhode Island</SelectItem>
+                              <SelectItem value="South Carolina">South Carolina</SelectItem>
+                              <SelectItem value="South Dakota">South Dakota</SelectItem>
+                              <SelectItem value="Tennessee">Tennessee</SelectItem>
+                              <SelectItem value="Texas">Texas</SelectItem>
+                              <SelectItem value="Utah">Utah</SelectItem>
+                              <SelectItem value="Vermont">Vermont</SelectItem>
+                              <SelectItem value="Virginia">Virginia</SelectItem>
+                              <SelectItem value="Washington">Washington</SelectItem>
+                              <SelectItem value="West Virginia">West Virginia</SelectItem>
+                              <SelectItem value="Wisconsin">Wisconsin</SelectItem>
+                              <SelectItem value="Wyoming">Wyoming</SelectItem>
+                            </SelectGroup>
+                            <SelectGroup>
+                              <SelectLabel>Canada</SelectLabel>
+                              <SelectItem value="Alberta">Alberta</SelectItem>
+                              <SelectItem value="British Columbia">British Columbia</SelectItem>
+                              <SelectItem value="Manitoba">Manitoba</SelectItem>
+                              <SelectItem value="New Brunswick">New Brunswick</SelectItem>
+                              <SelectItem value="Newfoundland and Labrador">Newfoundland and Labrador</SelectItem>
+                              <SelectItem value="Nova Scotia">Nova Scotia</SelectItem>
+                              <SelectItem value="Ontario">Ontario</SelectItem>
+                              <SelectItem value="Prince Edward Island">Prince Edward Island</SelectItem>
+                              <SelectItem value="Quebec">Quebec</SelectItem>
+                              <SelectItem value="Saskatchewan">Saskatchewan</SelectItem>
+                            </SelectGroup>
+                            <SelectItem value="Otro">Otro</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <Select name="destino">
+                          <SelectTrigger className="bg-white/10 border-white/30 text-white">
+                            <SelectValue placeholder="Destino" />
+                          </SelectTrigger>
+                          <SelectContent className="bg-white border-gray-200 z-50 max-h-[300px]">
+                            <SelectGroup>
+                              <SelectLabel>México</SelectLabel>
+                              <SelectItem value="Aguascalientes">Aguascalientes</SelectItem>
+                              <SelectItem value="Baja California">Baja California</SelectItem>
+                              <SelectItem value="Baja California Sur">Baja California Sur</SelectItem>
+                              <SelectItem value="Campeche">Campeche</SelectItem>
+                              <SelectItem value="Chiapas">Chiapas</SelectItem>
+                              <SelectItem value="Chihuahua">Chihuahua</SelectItem>
+                              <SelectItem value="Coahuila">Coahuila</SelectItem>
+                              <SelectItem value="Colima">Colima</SelectItem>
+                              <SelectItem value="Durango">Durango</SelectItem>
+                              <SelectItem value="Guanajuato">Guanajuato</SelectItem>
+                              <SelectItem value="Guerrero">Guerrero</SelectItem>
+                              <SelectItem value="Hidalgo">Hidalgo</SelectItem>
+                              <SelectItem value="Jalisco">Jalisco</SelectItem>
+                              <SelectItem value="México">México</SelectItem>
+                              <SelectItem value="Michoacán">Michoacán</SelectItem>
+                              <SelectItem value="Morelos">Morelos</SelectItem>
+                              <SelectItem value="Nayarit">Nayarit</SelectItem>
+                              <SelectItem value="Nuevo León">Nuevo León</SelectItem>
+                              <SelectItem value="Oaxaca">Oaxaca</SelectItem>
+                              <SelectItem value="Puebla">Puebla</SelectItem>
+                              <SelectItem value="Querétaro">Querétaro</SelectItem>
+                              <SelectItem value="Quintana Roo">Quintana Roo</SelectItem>
+                              <SelectItem value="San Luis Potosí">San Luis Potosí</SelectItem>
+                              <SelectItem value="Sinaloa">Sinaloa</SelectItem>
+                              <SelectItem value="Sonora">Sonora</SelectItem>
+                              <SelectItem value="Tabasco">Tabasco</SelectItem>
+                              <SelectItem value="Tamaulipas">Tamaulipas</SelectItem>
+                              <SelectItem value="Tlaxcala">Tlaxcala</SelectItem>
+                              <SelectItem value="Veracruz">Veracruz</SelectItem>
+                              <SelectItem value="Yucatán">Yucatán</SelectItem>
+                              <SelectItem value="Zacatecas">Zacatecas</SelectItem>
+                              <SelectItem value="Ciudad de México">Ciudad de México</SelectItem>
+                            </SelectGroup>
+                            <SelectGroup>
+                              <SelectLabel>USA</SelectLabel>
+                              <SelectItem value="Alabama">Alabama</SelectItem>
+                              <SelectItem value="Alaska">Alaska</SelectItem>
+                              <SelectItem value="Arizona">Arizona</SelectItem>
+                              <SelectItem value="Arkansas">Arkansas</SelectItem>
+                              <SelectItem value="California">California</SelectItem>
+                              <SelectItem value="Colorado">Colorado</SelectItem>
+                              <SelectItem value="Connecticut">Connecticut</SelectItem>
+                              <SelectItem value="Delaware">Delaware</SelectItem>
+                              <SelectItem value="Florida">Florida</SelectItem>
+                              <SelectItem value="Georgia">Georgia</SelectItem>
+                              <SelectItem value="Hawaii">Hawaii</SelectItem>
+                              <SelectItem value="Idaho">Idaho</SelectItem>
+                              <SelectItem value="Illinois">Illinois</SelectItem>
+                              <SelectItem value="Indiana">Indiana</SelectItem>
+                              <SelectItem value="Iowa">Iowa</SelectItem>
+                              <SelectItem value="Kansas">Kansas</SelectItem>
+                              <SelectItem value="Kentucky">Kentucky</SelectItem>
+                              <SelectItem value="Louisiana">Louisiana</SelectItem>
+                              <SelectItem value="Maine">Maine</SelectItem>
+                              <SelectItem value="Maryland">Maryland</SelectItem>
+                              <SelectItem value="Massachusetts">Massachusetts</SelectItem>
+                              <SelectItem value="Michigan">Michigan</SelectItem>
+                              <SelectItem value="Minnesota">Minnesota</SelectItem>
+                              <SelectItem value="Mississippi">Mississippi</SelectItem>
+                              <SelectItem value="Missouri">Missouri</SelectItem>
+                              <SelectItem value="Montana">Montana</SelectItem>
+                              <SelectItem value="Nebraska">Nebraska</SelectItem>
+                              <SelectItem value="Nevada">Nevada</SelectItem>
+                              <SelectItem value="New Hampshire">New Hampshire</SelectItem>
+                              <SelectItem value="New Jersey">New Jersey</SelectItem>
+                              <SelectItem value="New Mexico">New Mexico</SelectItem>
+                              <SelectItem value="New York">New York</SelectItem>
+                              <SelectItem value="North Carolina">North Carolina</SelectItem>
+                              <SelectItem value="North Dakota">North Dakota</SelectItem>
+                              <SelectItem value="Ohio">Ohio</SelectItem>
+                              <SelectItem value="Oklahoma">Oklahoma</SelectItem>
+                              <SelectItem value="Oregon">Oregon</SelectItem>
+                              <SelectItem value="Pennsylvania">Pennsylvania</SelectItem>
+                              <SelectItem value="Rhode Island">Rhode Island</SelectItem>
+                              <SelectItem value="South Carolina">South Carolina</SelectItem>
+                              <SelectItem value="South Dakota">South Dakota</SelectItem>
+                              <SelectItem value="Tennessee">Tennessee</SelectItem>
+                              <SelectItem value="Texas">Texas</SelectItem>
+                              <SelectItem value="Utah">Utah</SelectItem>
+                              <SelectItem value="Vermont">Vermont</SelectItem>
+                              <SelectItem value="Virginia">Virginia</SelectItem>
+                              <SelectItem value="Washington">Washington</SelectItem>
+                              <SelectItem value="West Virginia">West Virginia</SelectItem>
+                              <SelectItem value="Wisconsin">Wisconsin</SelectItem>
+                              <SelectItem value="Wyoming">Wyoming</SelectItem>
+                            </SelectGroup>
+                            <SelectGroup>
+                              <SelectLabel>Canada</SelectLabel>
+                              <SelectItem value="Alberta">Alberta</SelectItem>
+                              <SelectItem value="British Columbia">British Columbia</SelectItem>
+                              <SelectItem value="Manitoba">Manitoba</SelectItem>
+                              <SelectItem value="New Brunswick">New Brunswick</SelectItem>
+                              <SelectItem value="Newfoundland and Labrador">Newfoundland and Labrador</SelectItem>
+                              <SelectItem value="Nova Scotia">Nova Scotia</SelectItem>
+                              <SelectItem value="Ontario">Ontario</SelectItem>
+                              <SelectItem value="Prince Edward Island">Prince Edward Island</SelectItem>
+                              <SelectItem value="Quebec">Quebec</SelectItem>
+                              <SelectItem value="Saskatchewan">Saskatchewan</SelectItem>
+                            </SelectGroup>
+                            <SelectItem value="Otro">Otro</SelectItem>
+                          </SelectContent>
+                        </Select>
 
                         <Input
                           name="tipoUnidad"
