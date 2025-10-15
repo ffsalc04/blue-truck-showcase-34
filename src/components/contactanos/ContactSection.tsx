@@ -191,7 +191,7 @@ const ContactSection = () => {
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div className="col-span-2">
-                          <Select name="tipoServicio">
+                          <Select name="tipoServicio" required>
                             <SelectTrigger className="bg-white/10 border-white/30 text-white">
                               <SelectValue placeholder="Tipo de Servicio Requerido" />
                             </SelectTrigger>
