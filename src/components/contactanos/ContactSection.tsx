@@ -16,6 +16,7 @@ import cityNightMotion from '@/assets/city-night-motion.jpg';
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [volumeWeight, setVolumeWeight] = useState<'volume' | 'weight'>('volume');
+  const [weightUnit, setWeightUnit] = useState<'kg' | 'lbs'>('kg');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [temperaturaControlada, setTemperaturaControlada] = useState(false);
   const [cargaPeligrosa, setCargaPeligrosa] = useState(false);
@@ -70,7 +71,7 @@ const ContactSection = () => {
       // Append unit to cargo estimation
       const estimacionCarga = formData.get('estimacionCarga');
       if (estimacionCarga) {
-        const unit = volumeWeight === 'volume' ? 'm³' : 'kg';
+        const unit = volumeWeight === 'volume' ? 'm³' : weightUnit;
         formData.set('estimacionCarga', `${estimacionCarga} ${unit}`);
       }
 
@@ -96,6 +97,7 @@ const ContactSection = () => {
       setTemperaturaControlada(false);
       setCargaPeligrosa(false);
       setVolumeWeight('volume');
+      setWeightUnit('kg');
       setDate(undefined);
       setPhone('');
       e.currentTarget.reset();
@@ -543,12 +545,40 @@ const ContactSection = () => {
                               Peso
                             </button>
                           </div>
+                          
+                          {volumeWeight === 'weight' && (
+                            <div className="flex items-center space-x-2">
+                              <button
+                                type="button"
+                                onClick={() => setWeightUnit('kg')}
+                                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                  weightUnit === 'kg' 
+                                    ? 'bg-white text-brand-blue' 
+                                    : 'bg-white/20 text-white hover:bg-white/30'
+                                }`}
+                              >
+                                Kg
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => setWeightUnit('lbs')}
+                                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                  weightUnit === 'lbs' 
+                                    ? 'bg-white text-brand-blue' 
+                                    : 'bg-white/20 text-white hover:bg-white/30'
+                                }`}
+                              >
+                                Lbs
+                              </button>
+                            </div>
+                          )}
+                          
                           <Input
                             name="estimacionCarga"
                             type="text"
                             inputMode="decimal"
                             pattern="[0-9]*\.?[0-9]*"
-                            placeholder={volumeWeight === 'volume' ? 'Volumen estimado (m³)' : 'Peso estimado (kg)'}
+                            placeholder={volumeWeight === 'volume' ? 'Volumen estimado (m³)' : `Peso estimado (${weightUnit})`}
                             className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                             onInput={(e) => {
                               const target = e.target as HTMLInputElement;
