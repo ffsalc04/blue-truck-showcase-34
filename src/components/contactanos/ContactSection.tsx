@@ -34,7 +34,7 @@ const ContactSection = () => {
       formData.set('tipoCarga', volumeWeight === 'volume' ? 'Volumen' : 'Peso');
 
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycby5KTQy-I9-gyu0ozHyLgOlkeiJNjjby8zGZDS79Yy7qRdbBtp4l1qKC8ddPsKqrE2m/exec',
+        'https://script.google.com/macros/s/AKfycbxNd4NPqZE7yjXxf45OckXl73bwBtngC7ATW7pOgtOZzlPXjyWGPDAxc6brLE2DfsnV/exec',
         {
           method: 'POST',
           body: formData,
@@ -151,7 +151,7 @@ const ContactSection = () => {
                   
                   <form 
                     method="POST" 
-                    action="https://script.google.com/macros/s/AKfycby5KTQy-I9-gyu0ozHyLgOlkeiJNjjby8zGZDS79Yy7qRdbBtp4l1qKC8ddPsKqrE2m/exec"
+                    action="https://script.google.com/macros/s/AKfycbxNd4NPqZE7yjXxf45OckXl73bwBtngC7ATW7pOgtOZzlPXjyWGPDAxc6brLE2DfsnV/exec"
                     onSubmit={handleFormSubmit} 
                     className="space-y-6"
                   >
