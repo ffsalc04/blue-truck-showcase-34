@@ -218,7 +218,7 @@ const ContactSection = () => {
                       <Input
                         name="telefono"
                         type="tel"
-                        placeholder="Teléfono * (XX XXXX XXXX)"
+                        placeholder="Teléfono *"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         value={formatPhone(phone)}
                         onChange={handlePhoneChange}
