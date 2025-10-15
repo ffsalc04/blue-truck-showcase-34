@@ -565,7 +565,7 @@ const ContactSection = () => {
                             <Switch 
                               checked={temperaturaControlada}
                               onCheckedChange={setTemperaturaControlada}
-                              className="data-[state=checked]:bg-white" 
+                              className="data-[state=checked]:bg-green-500" 
                             />
                           </div>
 
@@ -575,7 +575,7 @@ const ContactSection = () => {
                             <Switch 
                               checked={cargaPeligrosa}
                               onCheckedChange={setCargaPeligrosa}
-                              className="data-[state=checked]:bg-white" 
+                              className="data-[state=checked]:bg-green-500" 
                             />
                           </div>
                         </div>
