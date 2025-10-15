@@ -194,7 +194,7 @@ const ContactSection = () => {
                     <div className="grid grid-cols-2 gap-4">
                       <Input
                         name="nombre"
-                        placeholder="Nombre completo"
+                        placeholder="Nombre completo *"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         pattern="[A-Za-zÀ-ÿ\s]+"
                         title="Solo se permiten letras"
@@ -211,14 +211,14 @@ const ContactSection = () => {
                       <Input
                         name="email"
                         type="email"
-                        placeholder="Correo electrónico"
+                        placeholder="Correo electrónico *"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         required
                       />
                       <Input
                         name="telefono"
                         type="tel"
-                        placeholder="XX XXXX XXXX"
+                        placeholder="Teléfono * (XX XXXX XXXX)"
                         className="bg-white/10 border-white/30 text-white placeholder:text-gray-300"
                         value={formatPhone(phone)}
                         onChange={handlePhoneChange}
@@ -236,7 +236,7 @@ const ContactSection = () => {
                         <div className="col-span-2">
                           <Select name="tipoServicio" required>
                             <SelectTrigger className="bg-white/10 border-white/30 text-white">
-                              <SelectValue placeholder="Tipo de Servicio Requerido" />
+                              <SelectValue placeholder="Tipo de Servicio Requerido *" />
                             </SelectTrigger>
                             <SelectContent className="bg-white border-gray-200 z-50">
                               <SelectItem value="flete-nacional">Flete Nacional</SelectItem>
