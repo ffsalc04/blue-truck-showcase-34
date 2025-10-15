@@ -8,6 +8,7 @@ import NuestrosServicios from "./pages/NuestrosServicios";
 import Transportes from "./pages/Transportes";
 import QuienesSomos from "./pages/QuienesSomos";
 import Contactanos from "./pages/Contactanos";
+import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
 import FloatingContactButton from "./components/FloatingContactButton";
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/transportes" element={<Transportes />} />
           <Route path="/quienes-somos" element={<QuienesSomos />} />
           <Route path="/contactanos" element={<Contactanos />} />
+          <Route path="/legal" element={<Legal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
