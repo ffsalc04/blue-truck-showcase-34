@@ -3,7 +3,7 @@ import React from 'react';
 const TransportesSection1 = () => {
   const advantages = [
     "Patio, almacen y servicio de burreo en el puerto de Manzanillo.",
-    "Capacidad para enbarcar full y sencillo.",
+    "Capacidad para embarcar full y sencillo.",
     "Presencia en las principales aduanas maritimas."
   ];
 
